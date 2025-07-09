@@ -12,7 +12,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👽</text></svg>">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>38 Everything Converter</title>
+  <title>169 Everything Converter</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -78,7 +78,72 @@
   </style>
 </head>
 <body>
-  <header>38 Everything Converter</header>
+<!-- ⚡ Neon Intro (Always Visible) -->
+<section id="introSection" style="position: relative; overflow: hidden; background: #000; padding: 120px 20px 140px; text-align: center; z-index: 1;">
+  <canvas id="bgParticles" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></canvas>
+
+  <div style="position: relative; z-index: 2; max-width: 900px; margin: auto; color: #00f0ff;">
+    <h1 style="font-size: 2.6em; font-weight: bold; text-shadow: 0 0 16px #00f0ff;">Everything Converter 169 — Convert the Impossible</h1>
+    <p style="font-size: 1.1em; color: #ccc; line-height: 1.8; margin-top: 30px;">
+      EverythingConverter169 isn’t just a tool — it's your high-performance command center for precision unit conversions.
+      Access <strong style="color: #00f0ff;">3,125 real-time converters</strong> across 
+      <strong style="color: #00ff88;">21 cutting-edge categories now online for free , no subscription or paid plans</strong> — from gravity-based pressure to cosmic-scale galactic units.
+    </p>
+    <p style="font-size: 1.1em; color: #bbb; line-height: 1.8; margin-top: 20px;">
+      Built for professionals, students, developers, creators, and anyone exploring reality's measurable layers. Whether you're in the lab, the kitchen, or deep space — EverythingConverter169 gives you the numbers instantly.
+    </p>
+    <p style="font-size: 1.05em; color: #aaa; line-height: 1.8; margin-top: 20px;">
+      Optimize your workflow with accurate, fast, and sleek conversions on any device. Designed for the present — and ready for the future.
+    </p>
+  </div>
+</section>
+
+<!-- 🌌 Glowing Particle Background -->
+<script>
+const canvas = document.getElementById('bgParticles');
+const ctx = canvas.getContext('2d');
+let particles = [];
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
+
+function createParticles() {
+  particles = [];
+  for (let i = 0; i < 120; i++) {
+    particles.push({
+      x: Math.random() * canvas.width,
+      y: canvas.height + Math.random() * 300,
+      size: Math.random() * 2.2 + 0.8,
+      speed: Math.random() * 0.7 + 0.3,
+      opacity: Math.random() * 0.5 + 0.2
+    });
+  }
+}
+
+function animateParticles() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  for (let p of particles) {
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.size, 0, 2 * Math.PI);
+    ctx.fillStyle = `rgba(0, 255, 255, ${p.opacity})`;
+    ctx.fill();
+    p.y -= p.speed;
+    if (p.y < -10) {
+      p.y = canvas.height + 10;
+      p.x = Math.random() * canvas.width;
+    }
+  }
+  requestAnimationFrame(animateParticles);
+}
+
+createParticles();
+animateParticles();
+</script>	
+  <header>Convert anything from Speed to Galactic Units now</header>
 
   <!-- CATEGORY SELECT -->
   <div id="category-section" class="category-grid">
@@ -3784,9 +3849,9 @@ document.getElementById('quick-select').addEventListener('change', e => {
 
     <!-- About the Site -->
     <section style="flex:1; min-width:260px;">
-      <h3 style="color:#ffffff; margin-bottom:15px;">About 38 Everything Converter</h3>
+      <h3 style="color:#ffffff; margin-bottom:15px;">About 169 Everything Converter</h3>
       <p style="line-height:1.7; font-size:14px;">
-        38 Everything Converter provides fast, accurate, and reliable unit conversions for professionals, students, and everyday users. Our mission is to simplify calculations and support informed decisions across a wide range of fields including science, engineering, finance, and daily life.
+        169 Everything Converter provides fast, accurate, and reliable unit conversions for professionals, students, and everyday users. Our mission is to simplify calculations and support informed decisions across a wide range of fields including science, engineering, finance, and daily life.
       </p>
     </section>
 
@@ -3818,7 +3883,7 @@ document.getElementById('quick-select').addEventListener('change', e => {
       This site uses cookies to analyze traffic and enhance the user experience. By using this site, you accept our <a href="#cookie-policy" style="color:#00ffe0;">Cookie Policy</a> and <a href="#privacy-policy" style="color:#00ffe0;">Privacy Policy</a>.
     </p>
     <p style="margin-top:10px;">
-      &copy; 2025 38 Everything Converter. All rights reserved.
+      &copy; 2025 169 Everything Converter. All rights reserved.
     </p>
   </div>
 </footer>
