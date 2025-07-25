@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Imperial Gallons to Liters | Everything Converter 169</title>
+  <meta name="description" content="Convert imperial gallons to liters for British measurements.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Imperial Gallons to Liters</h1>
+  <p>Convert imperial gallons to liters for British measurements.</p>
+  <input type="number" id="input" placeholder="Enter gal (imp)">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 4.54609)(val);
+      document.getElementById("result").textContent = val + " gal (imp) = " + result.toFixed(6) + " L";
+    }
+  </script>
+</body>
+</html>

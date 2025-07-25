@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Egg Yolks to Cups | Everything Converter 169</title>
+  <meta name="description" content="Convert egg yolks to cups for creamy dishes and emulsified sauces.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Egg Yolks to Cups</h1>
+  <p>Convert egg yolks to cups for creamy dishes and emulsified sauces.</p>
+  <input type="number" id="input" placeholder="Enter yolks">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (val => val * 0.0625)(val);
+      document.getElementById("result").textContent = val + " yolks = " + result.toFixed(6) + " cups";
+    }
+  </script>
+</body>
+</html>

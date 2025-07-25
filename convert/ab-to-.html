@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Abohms to Ohms | Everything Converter 169</title>
+  <meta name="description" content="Convert abohms to ohms for electromagnetic resistance.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Abohms to Ohms</h1>
+  <p>Convert abohms to ohms for electromagnetic resistance.</p>
+  <input type="number" id="input" placeholder="Enter abΩ">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1e-9)(val);
+      document.getElementById("result").textContent = val + " abΩ = " + result.toFixed(6) + " Ω";
+    }
+  </script>
+</body>
+</html>

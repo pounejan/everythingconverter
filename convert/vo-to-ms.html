@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Orbital Velocity to Meters/second | Everything Converter 169</title>
+  <meta name="description" content="Convert orbital velocity to meters per second for satellite calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Orbital Velocity to Meters/second</h1>
+  <p>Convert orbital velocity to meters per second for satellite calculations.</p>
+  <input type="number" id="input" placeholder="Enter vo">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 7800)(val);
+      document.getElementById("result").textContent = val + " vo = " + result.toFixed(6) + " m/s";
+    }
+  </script>
+</body>
+</html>

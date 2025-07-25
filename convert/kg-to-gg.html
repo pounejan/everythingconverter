@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kilograms to Gigagrams | Everything Converter 169</title>
+  <meta name="description" content="Convert kilograms to gigagrams for bulk logistics.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Kilograms to Gigagrams</h1>
+  <p>Convert kilograms to gigagrams for bulk logistics.</p>
+  <input type="number" id="input" placeholder="Enter kg">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 1e6)(val);
+      document.getElementById("result").textContent = val + " kg = " + result.toFixed(6) + " Gg";
+    }
+  </script>
+</body>
+</html>

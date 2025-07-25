@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Foot-pounds per Second to Horsepower | Everything Converter 169</title>
+  <meta name="description" content="Convert foot-pounds/sec to horsepower for engineering and machinery power ratings.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Foot-pounds per Second to Horsepower</h1>
+  <p>Convert foot-pounds/sec to horsepower for engineering and machinery power ratings.</p>
+  <input type="number" id="input" placeholder="Enter ft·lbf/s">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v/550)(val);
+      document.getElementById("result").textContent = val + " ft·lbf/s = " + result.toFixed(6) + " hp";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Teracycles to Terahertz | Everything Converter 169</title>
+  <meta name="description" content="Convert teracycles to terahertz for high-frequency use.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Teracycles to Terahertz</h1>
+  <p>Convert teracycles to terahertz for high-frequency use.</p>
+  <input type="number" id="input" placeholder="Enter Tc">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v)(val);
+      document.getElementById("result").textContent = val + " Tc = " + result.toFixed(6) + " THz";
+    }
+  </script>
+</body>
+</html>

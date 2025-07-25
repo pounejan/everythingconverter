@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>erg/G·cm² to Weber | Everything Converter 169</title>
+  <meta name="description" content="Transform erg per gauss per cm² to weber.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>erg/G·cm² to Weber</h1>
+  <p>Transform erg per gauss per cm² to weber.</p>
+  <input type="number" id="input" placeholder="Enter erg/G·cm²">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 1e15)(val);
+      document.getElementById("result").textContent = val + " erg/G·cm² = " + result.toFixed(6) + " Wb";
+    }
+  </script>
+</body>
+</html>

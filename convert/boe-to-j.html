@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Barrel of Oil Equivalent to Joules | Everything Converter 169</title>
+  <meta name="description" content="Transform barrel of oil equivalent to joules for energy calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Barrel of Oil Equivalent to Joules</h1>
+  <p>Transform barrel of oil equivalent to joules for energy calculations.</p>
+  <input type="number" id="input" placeholder="Enter boe">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 6.12e9)(val);
+      document.getElementById("result").textContent = val + " boe = " + result.toFixed(6) + " J";
+    }
+  </script>
+</body>
+</html>

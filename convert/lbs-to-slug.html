@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pounds to Slugs | Everything Converter 169</title>
+  <meta name="description" content="Convert pounds to slugs for engineering mass computations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Pounds to Slugs</h1>
+  <p>Convert pounds to slugs for engineering mass computations.</p>
+  <input type="number" id="input" placeholder="Enter lbs">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 0.0310809)(val);
+      document.getElementById("result").textContent = val + " lbs = " + result.toFixed(6) + " slug";
+    }
+  </script>
+</body>
+</html>

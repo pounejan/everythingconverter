@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>erg/G to Am² | Everything Converter 169</title>
+  <meta name="description" content="Transform erg/gauss to ampere-square meter.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>erg/G to Am²</h1>
+  <p>Transform erg/gauss to ampere-square meter.</p>
+  <input type="number" id="input" placeholder="Enter erg/G">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 1e7)(val);
+      document.getElementById("result").textContent = val + " erg/G = " + result.toFixed(6) + " Am²";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Meters per Hour to Meters per Second | Everything Converter 169</title>
+  <meta name="description" content="Convert meters per hour to meters per second for low-speed mechanical and industrial processes.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Meters per Hour to Meters per Second</h1>
+  <p>Convert meters per hour to meters per second for low-speed mechanical and industrial processes.</p>
+  <input type="number" id="input" placeholder="Enter m/h">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 3600)(val);
+      document.getElementById("result").textContent = val + " m/h = " + result.toFixed(6) + " m/s";
+    }
+  </script>
+</body>
+</html>

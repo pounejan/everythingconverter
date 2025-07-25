@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Years to Centuries | Everything Converter 169</title>
+  <meta name="description" content="Transform years to centuries for long-term event analysis.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Years to Centuries</h1>
+  <p>Transform years to centuries for long-term event analysis.</p>
+  <input type="number" id="input" placeholder="Enter yr">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 100)(val);
+      document.getElementById("result").textContent = val + " yr = " + result.toFixed(6) + " cent";
+    }
+  </script>
+</body>
+</html>

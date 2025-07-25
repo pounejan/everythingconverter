@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Decimeters to Centimeters | Everything Converter 169</title>
+  <meta name="description" content=" (dm to cm) – Precise metric scale">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Decimeters to Centimeters</h1>
+  <p> (dm to cm) – Precise metric scale</p>
+  <input type="number" id="input" placeholder="Enter dm">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 10)(val);
+      document.getElementById("result").textContent = val + " dm = " + result.toFixed(6) + " cm";
+    }
+  </script>
+</body>
+</html>

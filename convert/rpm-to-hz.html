@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RPM to Hertz | Everything Converter 169</title>
+  <meta name="description" content="Convert revolutions per minute to hertz.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>RPM to Hertz</h1>
+  <p>Convert revolutions per minute to hertz.</p>
+  <input type="number" id="input" placeholder="Enter rpm">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 60)(val);
+      document.getElementById("result").textContent = val + " rpm = " + result.toFixed(6) + " Hz";
+    }
+  </script>
+</body>
+</html>

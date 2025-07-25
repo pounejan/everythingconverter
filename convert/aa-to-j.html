@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BatteryAA to Joules | Everything Converter 169</title>
+  <meta name="description" content="Convert AA battery energy to joules for energy budgeting.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>BatteryAA to Joules</h1>
+  <p>Convert AA battery energy to joules for energy budgeting.</p>
+  <input type="number" id="input" placeholder="Enter AA">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v*9000)(val);
+      document.getElementById("result").textContent = val + " AA = " + result.toFixed(6) + " J";
+    }
+  </script>
+</body>
+</html>

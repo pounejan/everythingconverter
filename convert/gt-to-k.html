@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GoogleTemp to Kelvin | Everything Converter 169</title>
+  <meta name="description" content="Transform GoogleTemp to Kelvin for standardized physical units.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>GoogleTemp to Kelvin</h1>
+  <p>Transform GoogleTemp to Kelvin for standardized physical units.</p>
+  <input type="number" id="input" placeholder="Enter GT">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>(v/42.42))(val);
+      document.getElementById("result").textContent = val + " GT = " + result.toFixed(6) + " K";
+    }
+  </script>
+</body>
+</html>

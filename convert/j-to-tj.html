@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Joules to Terajoules | Everything Converter 169</title>
+  <meta name="description" content="Convert joules to terajoules for national energy production reports.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Joules to Terajoules</h1>
+  <p>Convert joules to terajoules for national energy production reports.</p>
+  <input type="number" id="input" placeholder="Enter J">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v/1e12)(val);
+      document.getElementById("result").textContent = val + " J = " + result.toFixed(6) + " TJ";
+    }
+  </script>
+</body>
+</html>

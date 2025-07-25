@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Minims (US) to Milliliters | Everything Converter 169</title>
+  <meta name="description" content="Convert US minims to milliliters for ultra-fine liquid volume measurements.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Minims (US) to Milliliters</h1>
+  <p>Convert US minims to milliliters for ultra-fine liquid volume measurements.</p>
+  <input type="number" id="input" placeholder="Enter min(US)">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 0.0616115)(val);
+      document.getElementById("result").textContent = val + " min(US) = " + result.toFixed(6) + " mL";
+    }
+  </script>
+</body>
+</html>

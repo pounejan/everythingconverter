@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Saudi Riyal to Euro | Everything Converter 169</title>
+  <meta name="description" content="Convert Saudi Riyal to Euro for currency conversion and investment.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Saudi Riyal to Euro</h1>
+  <p>Convert Saudi Riyal to Euro for currency conversion and investment.</p>
+  <input type="number" id="input" placeholder="Enter SAR">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 4.20)(val);
+      document.getElementById("result").textContent = val + " SAR = " + result.toFixed(6) + " EUR";
+    }
+  </script>
+</body>
+</html>

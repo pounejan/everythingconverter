@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Joules to Coal Kilogram | Everything Converter 169</title>
+  <meta name="description" content="Convert joules to kilograms of coal for fossil fuel energy equivalence.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Joules to Coal Kilogram</h1>
+  <p>Convert joules to kilograms of coal for fossil fuel energy equivalence.</p>
+  <input type="number" id="input" placeholder="Enter J">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v/2.5e7)(val);
+      document.getElementById("result").textContent = val + " J = " + result.toFixed(6) + " kgCoal";
+    }
+  </script>
+</body>
+</html>

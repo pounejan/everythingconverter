@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Unified Atomic Mass Units to Kilograms | Everything Converter 169</title>
+  <meta name="description" content="Convert unified atomic mass units to kilograms for mass calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Unified Atomic Mass Units to Kilograms</h1>
+  <p>Convert unified atomic mass units to kilograms for mass calculations.</p>
+  <input type="number" id="input" placeholder="Enter u">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1.66053906660e-27)(val);
+      document.getElementById("result").textContent = val + " u = " + result.toFixed(6) + " kg";
+    }
+  </script>
+</body>
+</html>

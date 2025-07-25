@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chinese Yuan to Euro | Everything Converter 169</title>
+  <meta name="description" content="Convert Chinese Yuan to Euro for cross-border currency exchange.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Chinese Yuan to Euro</h1>
+  <p>Convert Chinese Yuan to Euro for cross-border currency exchange.</p>
+  <input type="number" id="input" placeholder="Enter CNY">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 7.63)(val);
+      document.getElementById("result").textContent = val + " CNY = " + result.toFixed(6) + " EUR";
+    }
+  </script>
+</body>
+</html>

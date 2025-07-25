@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Square Centimeters to Square Feet | Everything Converter 169</title>
+  <meta name="description" content="Convert square centimeters to square feet for room layouts.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Square Centimeters to Square Feet</h1>
+  <p>Convert square centimeters to square feet for room layouts.</p>
+  <input type="number" id="input" placeholder="Enter cm²">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 929.0304)(val);
+      document.getElementById("result").textContent = val + " cm² = " + result.toFixed(6) + " ft²";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kilodaltons to Daltons | Everything Converter 169</title>
+  <meta name="description" content="Convert kilodaltons to daltons for large molecular mass.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Kilodaltons to Daltons</h1>
+  <p>Convert kilodaltons to daltons for large molecular mass.</p>
+  <input type="number" id="input" placeholder="Enter kDa">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1000)(val);
+      document.getElementById("result").textContent = val + " kDa = " + result.toFixed(6) + " Da";
+    }
+  </script>
+</body>
+</html>

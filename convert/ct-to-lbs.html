@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Carats to Pounds | Everything Converter 169</title>
+  <meta name="description" content="Convert carats to pounds for gem weight conversions.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Carats to Pounds</h1>
+  <p>Convert carats to pounds for gem weight conversions.</p>
+  <input type="number" id="input" placeholder="Enter ct">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => (v * 0.2) / 453.592)(val);
+      document.getElementById("result").textContent = val + " ct = " + result.toFixed(6) + " lbs";
+    }
+  </script>
+</body>
+</html>

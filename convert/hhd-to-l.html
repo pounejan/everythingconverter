@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hogsheads to Liters | Everything Converter 169</title>
+  <meta name="description" content="Convert hogsheads to liters for large volume measurements.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Hogsheads to Liters</h1>
+  <p>Convert hogsheads to liters for large volume measurements.</p>
+  <input type="number" id="input" placeholder="Enter hhd">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 238.481)(val);
+      document.getElementById("result").textContent = val + " hhd = " + result.toFixed(6) + " L";
+    }
+  </script>
+</body>
+</html>

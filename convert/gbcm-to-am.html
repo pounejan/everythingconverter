@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gilbert per cm to A/m | Everything Converter 169</title>
+  <meta name="description" content="Convert gilbert per cm to ampere per meter for magnetic field strength.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Gilbert per cm to A/m</h1>
+  <p>Convert gilbert per cm to ampere per meter for magnetic field strength.</p>
+  <input type="number" id="input" placeholder="Enter Gb/cm">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 79.577)(val);
+      document.getElementById("result").textContent = val + " Gb/cm = " + result.toFixed(6) + " A/m";
+    }
+  </script>
+</body>
+</html>

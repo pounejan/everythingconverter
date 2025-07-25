@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>British Pound to Euro | Everything Converter 169</title>
+  <meta name="description" content="Convert British Pound to Euro for currency conversion in Europe and the UK.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>British Pound to Euro</h1>
+  <p>Convert British Pound to Euro for currency conversion in Europe and the UK.</p>
+  <input type="number" id="input" placeholder="Enter GBP">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 0.86)(val);
+      document.getElementById("result").textContent = val + " GBP = " + result.toFixed(6) + " EUR";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallons (US) to Cubic Centimeters | Everything Converter 169</title>
+  <meta name="description" content="Convert US gallons to cubic centimeters for precise liquid volume conversions.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Gallons (US) to Cubic Centimeters</h1>
+  <p>Convert US gallons to cubic centimeters for precise liquid volume conversions.</p>
+  <input type="number" id="input" placeholder="Enter gal(US)">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 3785.41)(val);
+      document.getElementById("result").textContent = val + " gal(US) = " + result.toFixed(6) + " cm³";
+    }
+  </script>
+</body>
+</html>

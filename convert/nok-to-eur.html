@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Norwegian Krone to Euro | Everything Converter 169</title>
+  <meta name="description" content="Convert Norwegian Krone to Euro for currency conversion and investments.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Norwegian Krone to Euro</h1>
+  <p>Convert Norwegian Krone to Euro for currency conversion and investments.</p>
+  <input type="number" id="input" placeholder="Enter NOK">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 12.10)(val);
+      document.getElementById("result").textContent = val + " NOK = " + result.toFixed(6) + " EUR";
+    }
+  </script>
+</body>
+</html>

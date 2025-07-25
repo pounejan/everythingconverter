@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gravitational Waves to Quantum Gravity | Everything Converter 169</title>
+  <meta name="description" content="Transform gravitational waves to quantum gravity for quantum gravity.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Gravitational Waves to Quantum Gravity</h1>
+  <p>Transform gravitational waves to quantum gravity for quantum gravity.</p>
+  <input type="number" id="input" placeholder="Enter GW">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 1e-21)(val);
+      document.getElementById("result").textContent = val + " GW = " + result.toFixed(6) + " QG";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Square Meters to Decimeters | Everything Converter 169</title>
+  <meta name="description" content="Convert square meters to square decimeters for design layouts.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Square Meters to Decimeters</h1>
+  <p>Convert square meters to square decimeters for design layouts.</p>
+  <input type="number" id="input" placeholder="Enter m²">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 100)(val);
+      document.getElementById("result").textContent = val + " m² = " + result.toFixed(6) + " dm²";
+    }
+  </script>
+</body>
+</html>

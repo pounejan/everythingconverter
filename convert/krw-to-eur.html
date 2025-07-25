@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>South Korean Won to Euro | Everything Converter 169</title>
+  <meta name="description" content="Convert South Korean Won to Euro for currency conversion.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>South Korean Won to Euro</h1>
+  <p>Convert South Korean Won to Euro for currency conversion.</p>
+  <input type="number" id="input" placeholder="Enter KRW">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 1450)(val);
+      document.getElementById("result").textContent = val + " KRW = " + result.toFixed(6) + " EUR";
+    }
+  </script>
+</body>
+</html>

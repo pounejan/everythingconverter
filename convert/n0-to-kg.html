@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Neutrons to Kilograms | Everything Converter 169</title>
+  <meta name="description" content="Convert neutrons to kilograms for weight comparisons.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Neutrons to Kilograms</h1>
+  <p>Convert neutrons to kilograms for weight comparisons.</p>
+  <input type="number" id="input" placeholder="Enter n0">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1.675e-27)(val);
+      document.getElementById("result").textContent = val + " n0 = " + result.toFixed(6) + " kg";
+    }
+  </script>
+</body>
+</html>

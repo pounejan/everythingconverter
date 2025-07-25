@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quarter Section to Acres | Everything Converter 169</title>
+  <meta name="description" content="Convert quarter section to acres for land measurements.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Quarter Section to Acres</h1>
+  <p>Convert quarter section to acres for land measurements.</p>
+  <input type="number" id="input" placeholder="Enter ¼ section">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 160)(val);
+      document.getElementById("result").textContent = val + " ¼ section = " + result.toFixed(6) + " acres";
+    }
+  </script>
+</body>
+</html>

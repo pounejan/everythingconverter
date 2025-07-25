@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calorie-15 to Joules | Everything Converter 169</title>
+  <meta name="description" content="Convert calorie-15 to joules for consistency with modern energy units.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Calorie-15 to Joules</h1>
+  <p>Convert calorie-15 to joules for consistency with modern energy units.</p>
+  <input type="number" id="input" placeholder="Enter cal15">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v*4.1855)(val);
+      document.getElementById("result").textContent = val + " cal15 = " + result.toFixed(6) + " J";
+    }
+  </script>
+</body>
+</html>

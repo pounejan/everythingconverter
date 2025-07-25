@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Square Links to Square Meters | Everything Converter 169</title>
+  <meta name="description" content="Transform square links to square meters for cadastral history.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Square Links to Square Meters</h1>
+  <p>Transform square links to square meters for cadastral history.</p>
+  <input type="number" id="input" placeholder="Enter link²">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 25.29285264)(val);
+      document.getElementById("result").textContent = val + " link² = " + result.toFixed(6) + " m²";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kilocycles to Kilohertz | Everything Converter 169</title>
+  <meta name="description" content="Convert kilocycles to kilohertz for legacy frequency units.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Kilocycles to Kilohertz</h1>
+  <p>Convert kilocycles to kilohertz for legacy frequency units.</p>
+  <input type="number" id="input" placeholder="Enter kc">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v)(val);
+      document.getElementById("result").textContent = val + " kc = " + result.toFixed(6) + " kHz";
+    }
+  </script>
+</body>
+</html>

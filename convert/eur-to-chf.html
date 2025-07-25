@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Euro to Swiss Franc | Everything Converter 169</title>
+  <meta name="description" content="Convert Euro to Swiss Franc for currency conversion in European financial markets.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Euro to Swiss Franc</h1>
+  <p>Convert Euro to Swiss Franc for currency conversion in European financial markets.</p>
+  <input type="number" id="input" placeholder="Enter EUR">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 0.99)(val);
+      document.getElementById("result").textContent = val + " EUR = " + result.toFixed(6) + " CHF";
+    }
+  </script>
+</body>
+</html>

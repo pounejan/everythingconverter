@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yards per Minute to Meters per Second | Everything Converter 169</title>
+  <meta name="description" content="Convert yards per minute to meters per second for precise speed measurement in engineering.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Yards per Minute to Meters per Second</h1>
+  <p>Convert yards per minute to meters per second for precise speed measurement in engineering.</p>
+  <input type="number" id="input" placeholder="Enter yd/min">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 65.6168)(val);
+      document.getElementById("result").textContent = val + " yd/min = " + result.toFixed(6) + " m/s";
+    }
+  </script>
+</body>
+</html>

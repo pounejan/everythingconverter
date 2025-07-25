@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Oe to A/m (approx) | Everything Converter 169</title>
+  <meta name="description" content="Convert oersted to ampere per meter approximately.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Oe to A/m (approx)</h1>
+  <p>Convert oersted to ampere per meter approximately.</p>
+  <input type="number" id="input" placeholder="Enter Oe">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 0.01256637)(val);
+      document.getElementById("result").textContent = val + " Oe = " + result.toFixed(6) + " A/m";
+    }
+  </script>
+</body>
+</html>

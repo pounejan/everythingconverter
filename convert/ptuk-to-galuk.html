@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pints (UK) to Gallons (UK) | Everything Converter 169</title>
+  <meta name="description" content="Convert UK pints to UK gallons for accurate British volume scaling.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Pints (UK) to Gallons (UK)</h1>
+  <p>Convert UK pints to UK gallons for accurate British volume scaling.</p>
+  <input type="number" id="input" placeholder="Enter pt(UK)">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 8)(val);
+      document.getElementById("result").textContent = val + " pt(UK) = " + result.toFixed(6) + " gal(UK)";
+    }
+  </script>
+</body>
+</html>

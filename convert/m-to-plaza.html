@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Square Meters to Plaza | Everything Converter 169</title>
+  <meta name="description" content="Transform square meters to plaza for real estate and farming.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Square Meters to Plaza</h1>
+  <p>Transform square meters to plaza for real estate and farming.</p>
+  <input type="number" id="input" placeholder="Enter m²">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 10000)(val);
+      document.getElementById("result").textContent = val + " m² = " + result.toFixed(6) + " plaza";
+    }
+  </script>
+</body>
+</html>

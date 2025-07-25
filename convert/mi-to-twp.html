@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Square Miles to Township | Everything Converter 169</title>
+  <meta name="description" content="Transform square miles to township for surveying measurements.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Square Miles to Township</h1>
+  <p>Transform square miles to township for surveying measurements.</p>
+  <input type="number" id="input" placeholder="Enter mi²">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 36)(val);
+      document.getElementById("result").textContent = val + " mi² = " + result.toFixed(6) + " twp";
+    }
+  </script>
+</body>
+</html>

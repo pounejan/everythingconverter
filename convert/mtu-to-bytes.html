@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Network MTU to Bytes | Everything Converter 169</title>
+  <meta name="description" content="Convert network MTU to bytes transmitted per packet.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Network MTU to Bytes</h1>
+  <p>Convert network MTU to bytes transmitted per packet.</p>
+  <input type="number" id="input" placeholder="Enter MTU">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v)(val);
+      document.getElementById("result").textContent = val + " MTU = " + result.toFixed(6) + " bytes";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ping to Square Meters | Everything Converter 169</title>
+  <meta name="description" content="Convert ping to square meters used in Taiwan and Japan.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Ping to Square Meters</h1>
+  <p>Convert ping to square meters used in Taiwan and Japan.</p>
+  <input type="number" id="input" placeholder="Enter ping">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 3.30579)(val);
+      document.getElementById("result").textContent = val + " ping = " + result.toFixed(6) + " m²";
+    }
+  </script>
+</body>
+</html>

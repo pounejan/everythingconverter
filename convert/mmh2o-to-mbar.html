@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Millimeter of Water to Millibar | Everything Converter 169</title>
+  <meta name="description" content="Convert mmH2O to millibar for micro-pressure systems in climate control.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Millimeter of Water to Millibar</h1>
+  <p>Convert mmH2O to millibar for micro-pressure systems in climate control.</p>
+  <input type="number" id="input" placeholder="Enter mmH2O">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v*0.0980665)(val);
+      document.getElementById("result").textContent = val + " mmH2O = " + result.toFixed(6) + " mbar";
+    }
+  </script>
+</body>
+</html>

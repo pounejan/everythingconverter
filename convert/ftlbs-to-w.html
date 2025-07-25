@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Foot-pounds per Second to Watts | Everything Converter 169</title>
+  <meta name="description" content="Transform foot-pounds per second to watts for physics and engine work analysis.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Foot-pounds per Second to Watts</h1>
+  <p>Transform foot-pounds per second to watts for physics and engine work analysis.</p>
+  <input type="number" id="input" placeholder="Enter ft·lb/s">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v/0.737562)(val);
+      document.getElementById("result").textContent = val + " ft·lb/s = " + result.toFixed(6) + " W";
+    }
+  </script>
+</body>
+</html>

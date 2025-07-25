@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ampere-seconds to Coulombs | Everything Converter 169</title>
+  <meta name="description" content="Convert ampere-seconds to coulombs for electric charge.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Ampere-seconds to Coulombs</h1>
+  <p>Convert ampere-seconds to coulombs for electric charge.</p>
+  <input type="number" id="input" placeholder="Enter A⋅s">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1)(val);
+      document.getElementById("result").textContent = val + " A⋅s = " + result.toFixed(6) + " C";
+    }
+  </script>
+</body>
+</html>

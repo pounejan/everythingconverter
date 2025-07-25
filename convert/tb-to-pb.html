@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Terabit to Petabit | Everything Converter 169</title>
+  <meta name="description" content="Convert terabit to petabit for extremely high-speed data.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Terabit to Petabit</h1>
+  <p>Convert terabit to petabit for extremely high-speed data.</p>
+  <input type="number" id="input" placeholder="Enter Tb">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 1000)(val);
+      document.getElementById("result").textContent = val + " Tb = " + result.toFixed(6) + " Pb";
+    }
+  </script>
+</body>
+</html>

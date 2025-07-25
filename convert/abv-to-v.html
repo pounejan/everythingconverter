@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Abvolts to Volts | Everything Converter 169</title>
+  <meta name="description" content="Convert abvolts to volts for electromagnetic measurements.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Abvolts to Volts</h1>
+  <p>Convert abvolts to volts for electromagnetic measurements.</p>
+  <input type="number" id="input" placeholder="Enter abV">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1e-8)(val);
+      document.getElementById("result").textContent = val + " abV = " + result.toFixed(6) + " V";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Power of Ten | Everything Converter 169</title>
+  <meta name="description" content="Raise a number to power of 10.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Power of Ten</h1>
+  <p>Raise a number to power of 10.</p>
+  <input type="number" id="input" placeholder="Enter x">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => Math.pow(10, v))(val);
+      document.getElementById("result").textContent = val + " x = " + result.toFixed(6) + " 10^x";
+    }
+  </script>
+</body>
+</html>

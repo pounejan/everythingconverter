@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advantage to Quantum Supremacy | Everything Converter 169</title>
+  <meta name="description" content="Transform advantage to quantum supremacy for quantum computing.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Advantage to Quantum Supremacy</h1>
+  <p>Transform advantage to quantum supremacy for quantum computing.</p>
+  <input type="number" id="input" placeholder="Enter QA">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 1e6)(val);
+      document.getElementById("result").textContent = val + " QA = " + result.toFixed(6) + " QS";
+    }
+  </script>
+</body>
+</html>

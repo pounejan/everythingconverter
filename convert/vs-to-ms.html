@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>S-Wave Velocity to Meters/second | Everything Converter 169</title>
+  <meta name="description" content="Convert S-wave velocity to meters per second for seismic studies.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>S-Wave Velocity to Meters/second</h1>
+  <p>Convert S-wave velocity to meters per second for seismic studies.</p>
+  <input type="number" id="input" placeholder="Enter vs">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 3500)(val);
+      document.getElementById("result").textContent = val + " vs = " + result.toFixed(6) + " m/s";
+    }
+  </script>
+</body>
+</html>

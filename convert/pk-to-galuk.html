@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pecks to Gallons (UK) | Everything Converter 169</title>
+  <meta name="description" content="Convert pecks to UK gallons for British volume measurements in agriculture.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Pecks to Gallons (UK)</h1>
+  <p>Convert pecks to UK gallons for British volume measurements in agriculture.</p>
+  <input type="number" id="input" placeholder="Enter pk">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 2.201)(val);
+      document.getElementById("result").textContent = val + " pk = " + result.toFixed(6) + " gal(UK)";
+    }
+  </script>
+</body>
+</html>

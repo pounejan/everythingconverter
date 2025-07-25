@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cable Lengths to Meters | Everything Converter 169</title>
+  <meta name="description" content=" (cable to m) – Marine cable unit converter">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Cable Lengths to Meters</h1>
+  <p> (cable to m) – Marine cable unit converter</p>
+  <input type="number" id="input" placeholder="Enter cable">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 185.2)(val);
+      document.getElementById("result").textContent = val + " cable = " + result.toFixed(6) + " m";
+    }
+  </script>
+</body>
+</html>

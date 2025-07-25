@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cups (US Legal) to Milliliters | Everything Converter 169</title>
+  <meta name="description" content="Convert US legal cups to milliliters for standardized cooking volume conversions.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Cups (US Legal) to Milliliters</h1>
+  <p>Convert US legal cups to milliliters for standardized cooking volume conversions.</p>
+  <input type="number" id="input" placeholder="Enter cup(US legal)">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 240)(val);
+      document.getElementById("result").textContent = val + " cup(US legal) = " + result.toFixed(6) + " mL";
+    }
+  </script>
+</body>
+</html>

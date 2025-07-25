@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yards to Kilometers | Everything Converter 169</title>
+  <meta name="description" content="Convert yards to kilometers for distance calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Yards to Kilometers</h1>
+  <p>Convert yards to kilometers for distance calculations.</p>
+  <input type="number" id="input" placeholder="Enter yd">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 0.0009144)(val);
+      document.getElementById("result").textContent = val + " yd = " + result.toFixed(6) + " km";
+    }
+  </script>
+</body>
+</html>

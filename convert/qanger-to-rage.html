@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quantum Anger to Rage | Everything Converter 169</title>
+  <meta name="description" content="Convert quantum anger to rage for quantum mind theory.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Quantum Anger to Rage</h1>
+  <p>Convert quantum anger to rage for quantum mind theory.</p>
+  <input type="number" id="input" placeholder="Enter QAnger">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1e9)(val);
+      document.getElementById("result").textContent = val + " QAnger = " + result.toFixed(6) + " Rage";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Square Feet to Square Decimeters | Everything Converter 169</title>
+  <meta name="description" content="Convert square feet to square decimeters for modular floor plans.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Square Feet to Square Decimeters</h1>
+  <p>Convert square feet to square decimeters for modular floor plans.</p>
+  <input type="number" id="input" placeholder="Enter ft²">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 9.2903)(val);
+      document.getElementById("result").textContent = val + " ft² = " + result.toFixed(6) + " dm²";
+    }
+  </script>
+</body>
+</html>

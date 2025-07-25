@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Coulombs to Franklin | Everything Converter 169</title>
+  <meta name="description" content="Transform coulombs to franklin for electrostatic charge calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Coulombs to Franklin</h1>
+  <p>Transform coulombs to franklin for electrostatic charge calculations.</p>
+  <input type="number" id="input" placeholder="Enter C">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 3.335641e-10)(val);
+      document.getElementById("result").textContent = val + " C = " + result.toFixed(6) + " Fr";
+    }
+  </script>
+</body>
+</html>

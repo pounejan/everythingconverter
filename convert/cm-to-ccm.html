@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Coulombs per Square Meter to Coulombs per Square Centimeter | Everything Converter 169</title>
+  <meta name="description" content="Convert coulombs per square meter to coulombs per square centimeter for charge density.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Coulombs per Square Meter to Coulombs per Square Centimeter</h1>
+  <p>Convert coulombs per square meter to coulombs per square centimeter for charge density.</p>
+  <input type="number" id="input" placeholder="Enter C/m²">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 10000)(val);
+      document.getElementById("result").textContent = val + " C/m² = " + result.toFixed(6) + " C/cm²";
+    }
+  </script>
+</body>
+</html>

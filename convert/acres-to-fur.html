@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Acres to Square Furlongs | Everything Converter 169</title>
+  <meta name="description" content="Transform acres to square furlongs for estate planning.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Acres to Square Furlongs</h1>
+  <p>Transform acres to square furlongs for estate planning.</p>
+  <input type="number" id="input" placeholder="Enter acres">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 10)(val);
+      document.getElementById("result").textContent = val + " acres = " + result.toFixed(6) + " fur²";
+    }
+  </script>
+</body>
+</html>

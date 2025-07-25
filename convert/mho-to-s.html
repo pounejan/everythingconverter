@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mhos to Siemens | Everything Converter 169</title>
+  <meta name="description" content="Transform mhos to siemens for conductance calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Mhos to Siemens</h1>
+  <p>Transform mhos to siemens for conductance calculations.</p>
+  <input type="number" id="input" placeholder="Enter mho">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1)(val);
+      document.getElementById("result").textContent = val + " mho = " + result.toFixed(6) + " S";
+    }
+  </script>
+</body>
+</html>

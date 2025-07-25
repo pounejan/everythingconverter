@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Megacycles to Megahertz | Everything Converter 169</title>
+  <meta name="description" content="Convert megacycles to megahertz for modern usage.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Megacycles to Megahertz</h1>
+  <p>Convert megacycles to megahertz for modern usage.</p>
+  <input type="number" id="input" placeholder="Enter Mc">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v)(val);
+      document.getElementById("result").textContent = val + " Mc = " + result.toFixed(6) + " MHz";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Acres to Square Meters | Everything Converter 169</title>
+  <meta name="description" content="Transform acres to square meters for land area calculations and agricultural planning. Perfect for property development, farming calculations, and land measurement conversions.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Acres to Square Meters</h1>
+  <p>Transform acres to square meters for land area calculations and agricultural planning. Perfect for property development, farming calculations, and land measurement conversions.</p>
+  <input type="number" id="input" placeholder="Enter acres">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (val => val * 4047)(val);
+      document.getElementById("result").textContent = val + " acres = " + result.toFixed(6) + " m²";
+    }
+  </script>
+</body>
+</html>

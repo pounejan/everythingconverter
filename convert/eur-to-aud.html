@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Euro to Australian Dollar | Everything Converter 169</title>
+  <meta name="description" content="Convert Euro to Australian Dollar for global financial activities and travel.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Euro to Australian Dollar</h1>
+  <p>Convert Euro to Australian Dollar for global financial activities and travel.</p>
+  <input type="number" id="input" placeholder="Enter EUR">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1.67)(val);
+      document.getElementById("result").textContent = val + " EUR = " + result.toFixed(6) + " AUD";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Microliters to Cubic Millimeters | Everything Converter 169</title>
+  <meta name="description" content="Transform microliters to cubic millimeters for volume accuracy.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Microliters to Cubic Millimeters</h1>
+  <p>Transform microliters to cubic millimeters for volume accuracy.</p>
+  <input type="number" id="input" placeholder="Enter μL">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1)(val);
+      document.getElementById("result").textContent = val + " μL = " + result.toFixed(6) + " mm³";
+    }
+  </script>
+</body>
+</html>

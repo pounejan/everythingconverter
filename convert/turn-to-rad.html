@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Turns to Radians | Everything Converter 169</title>
+  <meta name="description" content="Convert full turns to radians.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Turns to Radians</h1>
+  <p>Convert full turns to radians.</p>
+  <input type="number" id="input" placeholder="Enter turn">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * (2 * Math.PI))(val);
+      document.getElementById("result").textContent = val + " turn = " + result.toFixed(6) + " rad";
+    }
+  </script>
+</body>
+</html>

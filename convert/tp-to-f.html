@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Planck to Fahrenheit | Everything Converter 169</title>
+  <meta name="description" content="Transform Planck temperature to Fahrenheit for theoretical thermodynamics.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Planck to Fahrenheit</h1>
+  <p>Transform Planck temperature to Fahrenheit for theoretical thermodynamics.</p>
+  <input type="number" id="input" placeholder="Enter Tp">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>(1.417e32*v-273.15)*9/5+32)(val);
+      document.getElementById("result").textContent = val + " Tp = " + result.toFixed(6) + " °F";
+    }
+  </script>
+</body>
+</html>

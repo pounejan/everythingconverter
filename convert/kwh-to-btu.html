@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kilowatt-hours to BTU | Everything Converter 169</title>
+  <meta name="description" content="Transform kilowatt-hours to BTU for energy conversion calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Kilowatt-hours to BTU</h1>
+  <p>Transform kilowatt-hours to BTU for energy conversion calculations.</p>
+  <input type="number" id="input" placeholder="Enter kWh">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 3412.14)(val);
+      document.getElementById("result").textContent = val + " kWh = " + result.toFixed(6) + " BTU";
+    }
+  </script>
+</body>
+</html>

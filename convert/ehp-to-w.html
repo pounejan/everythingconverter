@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Electrical Horsepower to Watts | Everything Converter 169</title>
+  <meta name="description" content="Convert electrical horsepower to watts for energy use calculation in motors.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Electrical Horsepower to Watts</h1>
+  <p>Convert electrical horsepower to watts for energy use calculation in motors.</p>
+  <input type="number" id="input" placeholder="Enter ehp">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v*746)(val);
+      document.getElementById("result").textContent = val + " ehp = " + result.toFixed(6) + " W";
+    }
+  </script>
+</body>
+</html>

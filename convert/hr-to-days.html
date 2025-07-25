@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hours to Days | Everything Converter 169</title>
+  <meta name="description" content="Transform hours into days for project planning, work scheduling, and time management. Perfect for calculating project durations, employee work hours, and understanding time investments in different units.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Hours to Days</h1>
+  <p>Transform hours into days for project planning, work scheduling, and time management. Perfect for calculating project durations, employee work hours, and understanding time investments in different units.</p>
+  <input type="number" id="input" placeholder="Enter hr">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (val => val / 24)(val);
+      document.getElementById("result").textContent = val + " hr = " + result.toFixed(6) + " days";
+    }
+  </script>
+</body>
+</html>

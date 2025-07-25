@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reciprocal | Everything Converter 169</title>
+  <meta name="description" content="Convert number to its reciprocal.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Reciprocal</h1>
+  <p>Convert number to its reciprocal.</p>
+  <input type="number" id="input" placeholder="Enter x">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => 1 / v)(val);
+      document.getElementById("result").textContent = val + " x = " + result.toFixed(6) + " 1/x";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Loops to Planck Units | Everything Converter 169</title>
+  <meta name="description" content="Convert loops to Planck units for loop quantum gravity.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Loops to Planck Units</h1>
+  <p>Convert loops to Planck units for loop quantum gravity.</p>
+  <input type="number" id="input" placeholder="Enter loop">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1.6e-35)(val);
+      document.getElementById("result").textContent = val + " loop = " + result.toFixed(6) + " lP";
+    }
+  </script>
+</body>
+</html>

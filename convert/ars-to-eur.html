@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Argentinian Peso to Euro | Everything Converter 169</title>
+  <meta name="description" content="Convert Argentinian Peso to Euro for currency conversions.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Argentinian Peso to Euro</h1>
+  <p>Convert Argentinian Peso to Euro for currency conversions.</p>
+  <input type="number" id="input" placeholder="Enter ARS">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 280)(val);
+      document.getElementById("result").textContent = val + " ARS = " + result.toFixed(6) + " EUR";
+    }
+  </script>
+</body>
+</html>

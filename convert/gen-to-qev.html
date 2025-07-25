@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Generations to Quantum Evolution | Everything Converter 169</title>
+  <meta name="description" content="Transform generations to quantum evolution for quantum biology.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Generations to Quantum Evolution</h1>
+  <p>Transform generations to quantum evolution for quantum biology.</p>
+  <input type="number" id="input" placeholder="Enter Gen">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 1e6)(val);
+      document.getElementById("result").textContent = val + " Gen = " + result.toFixed(6) + " QEv";
+    }
+  </script>
+</body>
+</html>

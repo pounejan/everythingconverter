@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Delisle to Gas Mark | Everything Converter 169</title>
+  <meta name="description" content="Transform Delisle to Gas Mark for heritage culinary alignment.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Delisle to Gas Mark</h1>
+  <p>Transform Delisle to Gas Mark for heritage culinary alignment.</p>
+  <input type="number" id="input" placeholder="Enter °De">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>(((373.15-v*2/3)-121)/14))(val);
+      document.getElementById("result").textContent = val + " °De = " + result.toFixed(6) + " Gas";
+    }
+  </script>
+</body>
+</html>

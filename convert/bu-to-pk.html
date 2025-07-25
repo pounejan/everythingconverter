@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bushels to Pecks | Everything Converter 169</title>
+  <meta name="description" content="Convert bushels to pecks for agricultural volume scaling and storage.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Bushels to Pecks</h1>
+  <p>Convert bushels to pecks for agricultural volume scaling and storage.</p>
+  <input type="number" id="input" placeholder="Enter bu">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 4)(val);
+      document.getElementById("result").textContent = val + " bu = " + result.toFixed(6) + " pk";
+    }
+  </script>
+</body>
+</html>

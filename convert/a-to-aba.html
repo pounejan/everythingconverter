@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Amperes to Abamperes | Everything Converter 169</title>
+  <meta name="description" content="Transform amperes to abamperes for electromagnetic current calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Amperes to Abamperes</h1>
+  <p>Transform amperes to abamperes for electromagnetic current calculations.</p>
+  <input type="number" id="input" placeholder="Enter A">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 10)(val);
+      document.getElementById("result").textContent = val + " A = " + result.toFixed(6) + " abA";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kilometers/hour to Meters/hour | Everything Converter 169</title>
+  <meta name="description" content="Transform kilometers per hour to meters per hour for detailed calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Kilometers/hour to Meters/hour</h1>
+  <p>Transform kilometers per hour to meters per hour for detailed calculations.</p>
+  <input type="number" id="input" placeholder="Enter km/h">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1000)(val);
+      document.getElementById("result").textContent = val + " km/h = " + result.toFixed(6) + " m/h";
+    }
+  </script>
+</body>
+</html>

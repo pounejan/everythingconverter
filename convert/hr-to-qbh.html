@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hawking Radiation to Quantum Black Hole | Everything Converter 169</title>
+  <meta name="description" content="Transform Hawking radiation to quantum black hole for quantum gravity.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Hawking Radiation to Quantum Black Hole</h1>
+  <p>Transform Hawking radiation to quantum black hole for quantum gravity.</p>
+  <input type="number" id="input" placeholder="Enter HR">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 6.2e-8)(val);
+      document.getElementById("result").textContent = val + " HR = " + result.toFixed(6) + " QBH";
+    }
+  </script>
+</body>
+</html>

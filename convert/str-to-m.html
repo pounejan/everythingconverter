@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Strings to Length | Everything Converter 169</title>
+  <meta name="description" content="Convert strings to length for string theory.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Strings to Length</h1>
+  <p>Convert strings to length for string theory.</p>
+  <input type="number" id="input" placeholder="Enter str">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1.6e-35)(val);
+      document.getElementById("result").textContent = val + " str = " + result.toFixed(6) + " m";
+    }
+  </script>
+</body>
+</html>

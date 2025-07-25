@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cups (US) to Fluid Ounces (US) | Everything Converter 169</title>
+  <meta name="description" content="Convert US cups to US fluid ounces for cooking and beverage volume measurements.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Cups (US) to Fluid Ounces (US)</h1>
+  <p>Convert US cups to US fluid ounces for cooking and beverage volume measurements.</p>
+  <input type="number" id="input" placeholder="Enter cup(US)">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 8)(val);
+      document.getElementById("result").textContent = val + " cup(US) = " + result.toFixed(6) + " fl oz(US)";
+    }
+  </script>
+</body>
+</html>

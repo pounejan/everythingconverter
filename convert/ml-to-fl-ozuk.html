@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Milliliters to Fluid Ounces (UK) | Everything Converter 169</title>
+  <meta name="description" content="Convert milliliters to UK fluid ounces for precise volume conversions.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Milliliters to Fluid Ounces (UK)</h1>
+  <p>Convert milliliters to UK fluid ounces for precise volume conversions.</p>
+  <input type="number" id="input" placeholder="Enter mL">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 28.4131)(val);
+      document.getElementById("result").textContent = val + " mL = " + result.toFixed(6) + " fl oz(UK)";
+    }
+  </script>
+</body>
+</html>

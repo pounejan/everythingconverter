@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smartphone Charge to Joules | Everything Converter 169</title>
+  <meta name="description" content="Convert phone charge to joules for mobile devices.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Smartphone Charge to Joules</h1>
+  <p>Convert phone charge to joules for mobile devices.</p>
+  <input type="number" id="input" placeholder="Enter phone">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v*36000)(val);
+      document.getElementById("result").textContent = val + " phone = " + result.toFixed(6) + " J";
+    }
+  </script>
+</body>
+</html>

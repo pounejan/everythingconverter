@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Henries per Meter to Henries per Centimeter | Everything Converter 169</title>
+  <meta name="description" content="Convert henries per meter to henries per centimeter for permeability.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Henries per Meter to Henries per Centimeter</h1>
+  <p>Convert henries per meter to henries per centimeter for permeability.</p>
+  <input type="number" id="input" placeholder="Enter H/m">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 100)(val);
+      document.getElementById("result").textContent = val + " H/m = " + result.toFixed(6) + " H/cm";
+    }
+  </script>
+</body>
+</html>

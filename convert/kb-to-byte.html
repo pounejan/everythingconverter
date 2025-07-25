@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kilobit to Byte | Everything Converter 169</title>
+  <meta name="description" content="Convert kilobit to byte for network and storage analysis.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Kilobit to Byte</h1>
+  <p>Convert kilobit to byte for network and storage analysis.</p>
+  <input type="number" id="input" placeholder="Enter Kb">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1000 / 8)(val);
+      document.getElementById("result").textContent = val + " Kb = " + result.toFixed(6) + " byte";
+    }
+  </script>
+</body>
+</html>

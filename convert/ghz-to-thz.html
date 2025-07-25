@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gigahertz to Terahertz | Everything Converter 169</title>
+  <meta name="description" content="Convert gigahertz to terahertz for extremely high frequency applications.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Gigahertz to Terahertz</h1>
+  <p>Convert gigahertz to terahertz for extremely high frequency applications.</p>
+  <input type="number" id="input" placeholder="Enter GHz">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 1000)(val);
+      document.getElementById("result").textContent = val + " GHz = " + result.toFixed(6) + " THz";
+    }
+  </script>
+</body>
+</html>

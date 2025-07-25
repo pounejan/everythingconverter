@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stremma to Square Meters | Everything Converter 169</title>
+  <meta name="description" content="Convert stremma (Greek unit) to square meters for agricultural land measurements.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Stremma to Square Meters</h1>
+  <p>Convert stremma (Greek unit) to square meters for agricultural land measurements.</p>
+  <input type="number" id="input" placeholder="Enter stremma">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1000)(val);
+      document.getElementById("result").textContent = val + " stremma = " + result.toFixed(6) + " m²";
+    }
+  </script>
+</body>
+</html>

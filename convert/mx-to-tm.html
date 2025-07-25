@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Maxwell to T·m² | Everything Converter 169</title>
+  <meta name="description" content="Convert maxwell to tesla-square meter.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Maxwell to T·m²</h1>
+  <p>Convert maxwell to tesla-square meter.</p>
+  <input type="number" id="input" placeholder="Enter Mx">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1e-8)(val);
+      document.getElementById("result").textContent = val + " Mx = " + result.toFixed(6) + " T·m²";
+    }
+  </script>
+</body>
+</html>

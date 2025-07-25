@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Planck Length to Meters | Everything Converter 169</title>
+  <meta name="description" content=" (pl to m) – Physics scale conversion">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Planck Length to Meters</h1>
+  <p> (pl to m) – Physics scale conversion</p>
+  <input type="number" id="input" placeholder="Enter pl">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1.616255e-35)(val);
+      document.getElementById("result").textContent = val + " pl = " + result.toFixed(6) + " m";
+    }
+  </script>
+</body>
+</html>

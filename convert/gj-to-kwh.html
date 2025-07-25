@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gigajoules to Kilowatt-hours | Everything Converter 169</title>
+  <meta name="description" content="Transform gigajoules to kilowatt-hours for energy conversion.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Gigajoules to Kilowatt-hours</h1>
+  <p>Transform gigajoules to kilowatt-hours for energy conversion.</p>
+  <input type="number" id="input" placeholder="Enter GJ">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 277.778)(val);
+      document.getElementById("result").textContent = val + " GJ = " + result.toFixed(6) + " kWh";
+    }
+  </script>
+</body>
+</html>

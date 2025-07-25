@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eggs to Cups | Everything Converter 169</title>
+  <meta name="description" content="Convert whole eggs to cups for standardized baking and meal preparation.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Eggs to Cups</h1>
+  <p>Convert whole eggs to cups for standardized baking and meal preparation.</p>
+  <input type="number" id="input" placeholder="Enter eggs">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (val => val * 0.2)(val);
+      document.getElementById("result").textContent = val + " eggs = " + result.toFixed(6) + " cups";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Centimeters/hour to Meters/second | Everything Converter 169</title>
+  <meta name="description" content="Convert centimeters per hour to meters per second for slow-motion analysis.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Centimeters/hour to Meters/second</h1>
+  <p>Convert centimeters per hour to meters per second for slow-motion analysis.</p>
+  <input type="number" id="input" placeholder="Enter cm/h">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 0.00000277778)(val);
+      document.getElementById("result").textContent = val + " cm/h = " + result.toFixed(6) + " m/s";
+    }
+  </script>
+</body>
+</html>

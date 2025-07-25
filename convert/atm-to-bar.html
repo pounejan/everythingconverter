@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Standard Atmosphere to Bar | Everything Converter 169</title>
+  <meta name="description" content="Convert standard atmosphere to bar for theoretical and experimental fluid systems.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Standard Atmosphere to Bar</h1>
+  <p>Convert standard atmosphere to bar for theoretical and experimental fluid systems.</p>
+  <input type="number" id="input" placeholder="Enter atm">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v*1.01325)(val);
+      document.getElementById("result").textContent = val + " atm = " + result.toFixed(6) + " bar";
+    }
+  </script>
+</body>
+</html>

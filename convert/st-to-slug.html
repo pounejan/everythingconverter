@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Short Tons to Slugs | Everything Converter 169</title>
+  <meta name="description" content="Convert short tons to slugs for legacy unit science.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Short Tons to Slugs</h1>
+  <p>Convert short tons to slugs for legacy unit science.</p>
+  <input type="number" id="input" placeholder="Enter st">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 907.18474 / 14.5939)(val);
+      document.getElementById("result").textContent = val + " st = " + result.toFixed(6) + " slug";
+    }
+  </script>
+</body>
+</html>

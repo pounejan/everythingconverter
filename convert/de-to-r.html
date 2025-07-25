@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Delisle to Rømer | Everything Converter 169</title>
+  <meta name="description" content="Transform Delisle to Rømer for retro engineering simulations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Delisle to Rømer</h1>
+  <p>Transform Delisle to Rømer for retro engineering simulations.</p>
+  <input type="number" id="input" placeholder="Enter °De">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>(((373.15-v*2/3)-273.15)*21/40+7.5))(val);
+      document.getElementById("result").textContent = val + " °De = " + result.toFixed(6) + " °Rø";
+    }
+  </script>
+</body>
+</html>

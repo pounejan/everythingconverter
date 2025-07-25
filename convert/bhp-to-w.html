@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Boiler Horsepower to Watts | Everything Converter 169</title>
+  <meta name="description" content="Convert boiler horsepower to watts for heating system and energy output.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Boiler Horsepower to Watts</h1>
+  <p>Convert boiler horsepower to watts for heating system and energy output.</p>
+  <input type="number" id="input" placeholder="Enter bhp">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v*9809.5)(val);
+      document.getElementById("result").textContent = val + " bhp = " + result.toFixed(6) + " W";
+    }
+  </script>
+</body>
+</html>

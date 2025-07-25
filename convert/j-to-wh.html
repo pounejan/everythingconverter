@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Joules to Watt-hours | Everything Converter 169</title>
+  <meta name="description" content="Convert joules to watt-hours for electrical energy measurements.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Joules to Watt-hours</h1>
+  <p>Convert joules to watt-hours for electrical energy measurements.</p>
+  <input type="number" id="input" placeholder="Enter J">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 3600)(val);
+      document.getElementById("result").textContent = val + " J = " + result.toFixed(6) + " Wh";
+    }
+  </script>
+</body>
+</html>

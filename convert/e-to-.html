@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>e to Pi | Everything Converter 169</title>
+  <meta name="description" content="Convert base e values to Pi ratios (humorously).">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>e to Pi</h1>
+  <p>Convert base e values to Pi ratios (humorously).</p>
+  <input type="number" id="input" placeholder="Enter e">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / Math.PI)(val);
+      document.getElementById("result").textContent = val + " e = " + result.toFixed(6) + " π";
+    }
+  </script>
+</body>
+</html>

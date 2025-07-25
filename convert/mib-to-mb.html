@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mebibyte to Megabyte | Everything Converter 169</title>
+  <meta name="description" content="Convert mebibyte to megabyte for accurate storage metric translation.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Mebibyte to Megabyte</h1>
+  <p>Convert mebibyte to megabyte for accurate storage metric translation.</p>
+  <input type="number" id="input" placeholder="Enter MiB">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1048576 / 1000000)(val);
+      document.getElementById("result").textContent = val + " MiB = " + result.toFixed(6) + " MB";
+    }
+  </script>
+</body>
+</html>

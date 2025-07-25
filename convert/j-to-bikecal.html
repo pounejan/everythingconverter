@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Joules to Bike Calorie Burn | Everything Converter 169</title>
+  <meta name="description" content="Convert joules to energy burned cycling (500 kcal/hr).">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Joules to Bike Calorie Burn</h1>
+  <p>Convert joules to energy burned cycling (500 kcal/hr).</p>
+  <input type="number" id="input" placeholder="Enter J">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v/418400)(val);
+      document.getElementById("result").textContent = val + " J = " + result.toFixed(6) + " bikeCal";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New Zealand Dollar to US Dollar | Everything Converter 169</title>
+  <meta name="description" content="Convert New Zealand Dollar to US Dollar for currency exchange and financial planning.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>New Zealand Dollar to US Dollar</h1>
+  <p>Convert New Zealand Dollar to US Dollar for currency exchange and financial planning.</p>
+  <input type="number" id="input" placeholder="Enter NZD">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 1.63)(val);
+      document.getElementById("result").textContent = val + " NZD = " + result.toFixed(6) + " USD";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallon-Atmosphere to Joules | Everything Converter 169</title>
+  <meta name="description" content="Transform gallon-atmosphere to joules for pressure-volume work calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Gallon-Atmosphere to Joules</h1>
+  <p>Transform gallon-atmosphere to joules for pressure-volume work calculations.</p>
+  <input type="number" id="input" placeholder="Enter gal·atm">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 383.56)(val);
+      document.getElementById("result").textContent = val + " gal·atm = " + result.toFixed(6) + " J";
+    }
+  </script>
+</body>
+</html>

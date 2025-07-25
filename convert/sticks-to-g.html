@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sticks of Butter to Grams | Everything Converter 169</title>
+  <meta name="description" content="Convert sticks of butter to grams for baking accuracy and international recipe adaptation.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Sticks of Butter to Grams</h1>
+  <p>Convert sticks of butter to grams for baking accuracy and international recipe adaptation.</p>
+  <input type="number" id="input" placeholder="Enter sticks">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (val => val * 113.4)(val);
+      document.getElementById("result").textContent = val + " sticks = " + result.toFixed(6) + " g";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>J/T to Am² | Everything Converter 169</title>
+  <meta name="description" content="Transform joule per tesla to ampere square meter in physics.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>J/T to Am²</h1>
+  <p>Transform joule per tesla to ampere square meter in physics.</p>
+  <input type="number" id="input" placeholder="Enter J/T">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1)(val);
+      document.getElementById("result").textContent = val + " J/T = " + result.toFixed(6) + " Am²";
+    }
+  </script>
+</body>
+</html>

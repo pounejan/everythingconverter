@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ounces to Carats | Everything Converter 169</title>
+  <meta name="description" content="Convert ounces to carats for gemstone weight conversion.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Ounces to Carats</h1>
+  <p>Convert ounces to carats for gemstone weight conversion.</p>
+  <input type="number" id="input" placeholder="Enter oz">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 141.748)(val);
+      document.getElementById("result").textContent = val + " oz = " + result.toFixed(6) + " ct";
+    }
+  </script>
+</body>
+</html>

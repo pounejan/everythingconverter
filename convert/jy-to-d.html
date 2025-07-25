@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Julian Years to Days | Everything Converter 169</title>
+  <meta name="description" content="Convert Julian years to days for calendar modeling.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Julian Years to Days</h1>
+  <p>Convert Julian years to days for calendar modeling.</p>
+  <input type="number" id="input" placeholder="Enter jy">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 365.25)(val);
+      document.getElementById("result").textContent = val + " jy = " + result.toFixed(6) + " d";
+    }
+  </script>
+</body>
+</html>

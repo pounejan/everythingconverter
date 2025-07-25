@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Terabyte to Tebibyte | Everything Converter 169</title>
+  <meta name="description" content="Convert terabyte to tebibyte for comparing large metric and binary data.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Terabyte to Tebibyte</h1>
+  <p>Convert terabyte to tebibyte for comparing large metric and binary data.</p>
+  <input type="number" id="input" placeholder="Enter TB">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1000000000000 / 1099511627776)(val);
+      document.getElementById("result").textContent = val + " TB = " + result.toFixed(6) + " TiB";
+    }
+  </script>
+</body>
+</html>

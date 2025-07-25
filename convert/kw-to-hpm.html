@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kilowatts to Horsepower (metric) | Everything Converter 169</title>
+  <meta name="description" content="Transform kilowatts to metric horsepower for European engine ratings.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Kilowatts to Horsepower (metric)</h1>
+  <p>Transform kilowatts to metric horsepower for European engine ratings.</p>
+  <input type="number" id="input" placeholder="Enter kW">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v*1.36)(val);
+      document.getElementById("result").textContent = val + " kW = " + result.toFixed(6) + " hp(m)";
+    }
+  </script>
+</body>
+</html>

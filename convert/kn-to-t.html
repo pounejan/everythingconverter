@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kilonewtons to Metric Tons | Everything Converter 169</title>
+  <meta name="description" content="Transform kilonewtons to metric tons for gravitational mass.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Kilonewtons to Metric Tons</h1>
+  <p>Transform kilonewtons to metric tons for gravitational mass.</p>
+  <input type="number" id="input" placeholder="Enter kN">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 9.80665)(val);
+      document.getElementById("result").textContent = val + " kN = " + result.toFixed(6) + " t";
+    }
+  </script>
+</body>
+</html>

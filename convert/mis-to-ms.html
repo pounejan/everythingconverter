@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Miles per Second to Meters per Second | Everything Converter 169</title>
+  <meta name="description" content="Convert miles per second to meters per second for hypersonic travel and scientific research.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Miles per Second to Meters per Second</h1>
+  <p>Convert miles per second to meters per second for hypersonic travel and scientific research.</p>
+  <input type="number" id="input" placeholder="Enter mi/s">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1609.34)(val);
+      document.getElementById("result").textContent = val + " mi/s = " + result.toFixed(6) + " m/s";
+    }
+  </script>
+</body>
+</html>

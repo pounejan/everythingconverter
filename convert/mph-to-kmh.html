@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Miles per Hour to Kilometers per Hour | Everything Converter 169</title>
+  <meta name="description" content="Convert miles per hour to kilometers per hour for travel, car speed comparisons, and global driving standards.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Miles per Hour to Kilometers per Hour</h1>
+  <p>Convert miles per hour to kilometers per hour for travel, car speed comparisons, and global driving standards.</p>
+  <input type="number" id="input" placeholder="Enter mph">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1.60934)(val);
+      document.getElementById("result").textContent = val + " mph = " + result.toFixed(6) + " km/h";
+    }
+  </script>
+</body>
+</html>

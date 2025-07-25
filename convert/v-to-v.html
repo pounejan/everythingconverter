@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Microvolts to Volts | Everything Converter 169</title>
+  <meta name="description" content="Transform microvolts to volts for voltage calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Microvolts to Volts</h1>
+  <p>Transform microvolts to volts for voltage calculations.</p>
+  <input type="number" id="input" placeholder="Enter μV">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 1000000)(val);
+      document.getElementById("result").textContent = val + " μV = " + result.toFixed(6) + " V";
+    }
+  </script>
+</body>
+</html>

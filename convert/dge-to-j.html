@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Diesel Gallon Equivalent to Joules | Everything Converter 169</title>
+  <meta name="description" content="Convert diesel gallon equivalent to joules for fuel economy metrics.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Diesel Gallon Equivalent to Joules</h1>
+  <p>Convert diesel gallon equivalent to joules for fuel economy metrics.</p>
+  <input type="number" id="input" placeholder="Enter DGE">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v*1.3e8)(val);
+      document.getElementById("result").textContent = val + " DGE = " + result.toFixed(6) + " J";
+    }
+  </script>
+</body>
+</html>

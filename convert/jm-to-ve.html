@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Energy Density to Vacuum Energy | Everything Converter 169</title>
+  <meta name="description" content="Transform energy density to vacuum energy for quantum field theory.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Energy Density to Vacuum Energy</h1>
+  <p>Transform energy density to vacuum energy for quantum field theory.</p>
+  <input type="number" id="input" placeholder="Enter J/m³">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 1e113)(val);
+      document.getElementById("result").textContent = val + " J/m³ = " + result.toFixed(6) + " VE";
+    }
+  </script>
+</body>
+</html>

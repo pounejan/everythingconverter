@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wb to nWb | Everything Converter 169</title>
+  <meta name="description" content="Transform weber to nanoweber for small flux.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Wb to nWb</h1>
+  <p>Transform weber to nanoweber for small flux.</p>
+  <input type="number" id="input" placeholder="Enter Wb">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1e9)(val);
+      document.getElementById("result").textContent = val + " Wb = " + result.toFixed(6) + " nWb";
+    }
+  </script>
+</body>
+</html>

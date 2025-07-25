@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wavelength to Wave-Particle Duality | Everything Converter 169</title>
+  <meta name="description" content="Transform wavelength to wave-particle duality for quantum mechanics.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Wavelength to Wave-Particle Duality</h1>
+  <p>Transform wavelength to wave-particle duality for quantum mechanics.</p>
+  <input type="number" id="input" placeholder="Enter λ">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 6.626e-34)(val);
+      document.getElementById("result").textContent = val + " λ = " + result.toFixed(6) + " WPD";
+    }
+  </script>
+</body>
+</html>

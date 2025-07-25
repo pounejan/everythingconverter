@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mebibyte to Gibibyte | Everything Converter 169</title>
+  <meta name="description" content="Convert mebibyte to gibibyte for high-capacity binary storage.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Mebibyte to Gibibyte</h1>
+  <p>Convert mebibyte to gibibyte for high-capacity binary storage.</p>
+  <input type="number" id="input" placeholder="Enter MiB">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 1024)(val);
+      document.getElementById("result").textContent = val + " MiB = " + result.toFixed(6) + " GiB";
+    }
+  </script>
+</body>
+</html>

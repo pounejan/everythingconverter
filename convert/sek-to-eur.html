@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swedish Krona to Euro | Everything Converter 169</title>
+  <meta name="description" content="Convert Swedish Krona to Euro for currency conversion and investments.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Swedish Krona to Euro</h1>
+  <p>Convert Swedish Krona to Euro for currency conversion and investments.</p>
+  <input type="number" id="input" placeholder="Enter SEK">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 11.50)(val);
+      document.getElementById("result").textContent = val + " SEK = " + result.toFixed(6) + " EUR";
+    }
+  </script>
+</body>
+</html>

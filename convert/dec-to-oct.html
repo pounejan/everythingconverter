@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Decimal to Base 8 | Everything Converter 169</title>
+  <meta name="description" content="Convert decimal to octal notation.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Decimal to Base 8</h1>
+  <p>Convert decimal to octal notation.</p>
+  <input type="number" id="input" placeholder="Enter dec">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v.toString(8))(val);
+      document.getElementById("result").textContent = val + " dec = " + result.toFixed(6) + " oct";
+    }
+  </script>
+</body>
+</html>

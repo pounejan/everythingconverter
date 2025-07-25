@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Binary to Hexadecimal | Everything Converter 169</title>
+  <meta name="description" content="Convert binary to hexadecimal for compact data encoding.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Binary to Hexadecimal</h1>
+  <p>Convert binary to hexadecimal for compact data encoding.</p>
+  <input type="number" id="input" placeholder="Enter binary">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => parseInt(v, 2).toString(16))(val);
+      document.getElementById("result").textContent = val + " binary = " + result.toFixed(6) + " hex";
+    }
+  </script>
+</body>
+</html>

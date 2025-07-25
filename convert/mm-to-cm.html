@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Square Millimeters to Square Centimeters | Everything Converter 169</title>
+  <meta name="description" content="Convert square millimeters to square centimeters for packaging.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Square Millimeters to Square Centimeters</h1>
+  <p>Convert square millimeters to square centimeters for packaging.</p>
+  <input type="number" id="input" placeholder="Enter mm²">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 100)(val);
+      document.getElementById("result").textContent = val + " mm² = " + result.toFixed(6) + " cm²";
+    }
+  </script>
+</body>
+</html>

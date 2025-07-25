@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pixel to Megapixel | Everything Converter 169</title>
+  <meta name="description" content="Convert pixel count to megapixels for digital image size.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Pixel to Megapixel</h1>
+  <p>Convert pixel count to megapixels for digital image size.</p>
+  <input type="number" id="input" placeholder="Enter pixel">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 1000000)(val);
+      document.getElementById("result").textContent = val + " pixel = " + result.toFixed(6) + " MP";
+    }
+  </script>
+</body>
+</html>

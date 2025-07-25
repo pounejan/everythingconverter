@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kiloparsecs to Light Years | Everything Converter 169</title>
+  <meta name="description" content="Convert kiloparsecs to light years for galactic distance calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Kiloparsecs to Light Years</h1>
+  <p>Convert kiloparsecs to light years for galactic distance calculations.</p>
+  <input type="number" id="input" placeholder="Enter kpc">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 3260)(val);
+      document.getElementById("result").textContent = val + " kpc = " + result.toFixed(6) + " ly";
+    }
+  </script>
+</body>
+</html>

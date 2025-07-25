@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Megapixel to Sensor Width | Everything Converter 169</title>
+  <meta name="description" content="Convert megapixel count to sensor width for photography.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Megapixel to Sensor Width</h1>
+  <p>Convert megapixel count to sensor width for photography.</p>
+  <input type="number" id="input" placeholder="Enter MP">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => Math.sqrt((v * 1000000) / 1.5))(val);
+      document.getElementById("result").textContent = val + " MP = " + result.toFixed(6) + " sensor";
+    }
+  </script>
+</body>
+</html>

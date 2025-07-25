@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cups to Pints | Everything Converter 169</title>
+  <meta name="description" content="Convert cups to pints for scaling beverage or soup recipes effortlessly.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Cups to Pints</h1>
+  <p>Convert cups to pints for scaling beverage or soup recipes effortlessly.</p>
+  <input type="number" id="input" placeholder="Enter cups">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (val => val / 2)(val);
+      document.getElementById("result").textContent = val + " cups = " + result.toFixed(6) + " pt";
+    }
+  </script>
+</body>
+</html>

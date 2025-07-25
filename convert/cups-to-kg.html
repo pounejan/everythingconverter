@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cups to Kilograms | Everything Converter 169</title>
+  <meta name="description" content="Convert cups to kilograms for large-scale cooking and international unit usage.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Cups to Kilograms</h1>
+  <p>Convert cups to kilograms for large-scale cooking and international unit usage.</p>
+  <input type="number" id="input" placeholder="Enter cups">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (val => val * 0.236588)(val);
+      document.getElementById("result").textContent = val + " cups = " + result.toFixed(6) + " kg";
+    }
+  </script>
+</body>
+</html>

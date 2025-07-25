@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sidereal Day to Seconds | Everything Converter 169</title>
+  <meta name="description" content="Convert sidereal day to seconds (23.934h).">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Sidereal Day to Seconds</h1>
+  <p>Convert sidereal day to seconds (23.934h).</p>
+  <input type="number" id="input" placeholder="Enter sd">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 86164.1)(val);
+      document.getElementById("result").textContent = val + " sd = " + result.toFixed(6) + " s";
+    }
+  </script>
+</body>
+</html>

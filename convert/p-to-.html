@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Planck Density to Singularity | Everything Converter 169</title>
+  <meta name="description" content="Transform Planck density to singularity for black hole physics.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Planck Density to Singularity</h1>
+  <p>Transform Planck density to singularity for black hole physics.</p>
+  <input type="number" id="input" placeholder="Enter ρP">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 5.16e96)(val);
+      document.getElementById("result").textContent = val + " ρP = " + result.toFixed(6) + " ∞";
+    }
+  </script>
+</body>
+</html>

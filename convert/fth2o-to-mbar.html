@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feet of Water to Millibar | Everything Converter 169</title>
+  <meta name="description" content="Transform feet of water to millibar for measuring static pressure in tanks.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Feet of Water to Millibar</h1>
+  <p>Transform feet of water to millibar for measuring static pressure in tanks.</p>
+  <input type="number" id="input" placeholder="Enter ftH2O">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v/0.033456)(val);
+      document.getElementById("result").textContent = val + " ftH2O = " + result.toFixed(6) + " mbar";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Speed of Light to Meters per Second | Everything Converter 169</title>
+  <meta name="description" content="Convert speed of light to meters per second for physics, cosmology, and quantum mechanics studies.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Speed of Light to Meters per Second</h1>
+  <p>Convert speed of light to meters per second for physics, cosmology, and quantum mechanics studies.</p>
+  <input type="number" id="input" placeholder="Enter c">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 299792458)(val);
+      document.getElementById("result").textContent = val + " c = " + result.toFixed(6) + " m/s";
+    }
+  </script>
+</body>
+</html>

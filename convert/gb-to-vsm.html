@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gilbert to V·s/m | Everything Converter 169</title>
+  <meta name="description" content="Convert gilberts to volt-seconds per meter.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Gilbert to V·s/m</h1>
+  <p>Convert gilberts to volt-seconds per meter.</p>
+  <input type="number" id="input" placeholder="Enter Gb">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1e-7)(val);
+      document.getElementById("result").textContent = val + " Gb = " + result.toFixed(6) + " V·s/m";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Byte to ASCII Character | Everything Converter 169</title>
+  <meta name="description" content="Convert byte value to ASCII character for encoding.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Byte to ASCII Character</h1>
+  <p>Convert byte value to ASCII character for encoding.</p>
+  <input type="number" id="input" placeholder="Enter byte">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => String.fromCharCode(v))(val);
+      document.getElementById("result").textContent = val + " byte = " + result.toFixed(6) + " char";
+    }
+  </script>
+</body>
+</html>

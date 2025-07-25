@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inches to Hands | Everything Converter 169</title>
+  <meta name="description" content=" (in to hand) – Convert inch to equine unit">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Inches to Hands</h1>
+  <p> (in to hand) – Convert inch to equine unit</p>
+  <input type="number" id="input" placeholder="Enter in">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 4)(val);
+      document.getElementById("result").textContent = val + " in = " + result.toFixed(6) + " hand";
+    }
+  </script>
+</body>
+</html>

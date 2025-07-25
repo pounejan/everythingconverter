@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Slugs to Long Tons | Everything Converter 169</title>
+  <meta name="description" content="Transform slugs to long tons for gravitational mass.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Slugs to Long Tons</h1>
+  <p>Transform slugs to long tons for gravitational mass.</p>
+  <input type="number" id="input" placeholder="Enter slug">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 14.5939 / 1016.05)(val);
+      document.getElementById("result").textContent = val + " slug = " + result.toFixed(6) + " lt";
+    }
+  </script>
+</body>
+</html>

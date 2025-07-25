@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grams to Pounds-Force | Everything Converter 169</title>
+  <meta name="description" content="Convert grams to pounds-force under Earth gravity.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Grams to Pounds-Force</h1>
+  <p>Convert grams to pounds-force under Earth gravity.</p>
+  <input type="number" id="input" placeholder="Enter g">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 0.00220462 * 9.80665)(val);
+      document.getElementById("result").textContent = val + " g = " + result.toFixed(6) + " lbf";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gas Mark to Kelvin | Everything Converter 169</title>
+  <meta name="description" content="Transform Gas Mark to Kelvin for baking at scientifically derived values.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Gas Mark to Kelvin</h1>
+  <p>Transform Gas Mark to Kelvin for baking at scientifically derived values.</p>
+  <input type="number" id="input" placeholder="Enter Gas">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>(v*14+394.15))(val);
+      document.getElementById("result").textContent = val + " Gas = " + result.toFixed(6) + " K";
+    }
+  </script>
+</body>
+</html>

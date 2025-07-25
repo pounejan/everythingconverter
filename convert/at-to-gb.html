@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ampere-turns to Gilberts | Everything Converter 169</title>
+  <meta name="description" content="Convert ampere-turns to gilberts for magnetomotive force.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Ampere-turns to Gilberts</h1>
+  <p>Convert ampere-turns to gilberts for magnetomotive force.</p>
+  <input type="number" id="input" placeholder="Enter At">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1.256637)(val);
+      document.getElementById("result").textContent = val + " At = " + result.toFixed(6) + " Gb";
+    }
+  </script>
+</body>
+</html>

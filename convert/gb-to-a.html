@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gilbert to A | Everything Converter 169</title>
+  <meta name="description" content="Convert gilberts to amperes for magnetomotive force.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Gilbert to A</h1>
+  <p>Convert gilberts to amperes for magnetomotive force.</p>
+  <input type="number" id="input" placeholder="Enter Gb">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 0.795775)(val);
+      document.getElementById("result").textContent = val + " Gb = " + result.toFixed(6) + " A";
+    }
+  </script>
+</body>
+</html>

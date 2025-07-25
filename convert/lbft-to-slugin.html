@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pounds per Cubic Foot to Slugs per Cubic Inch | Everything Converter 169</title>
+  <meta name="description" content="Convert pounds per cubic foot to slugs per cubic inch for detailed density measurements.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Pounds per Cubic Foot to Slugs per Cubic Inch</h1>
+  <p>Convert pounds per cubic foot to slugs per cubic inch for detailed density measurements.</p>
+  <input type="number" id="input" placeholder="Enter lb/ft³">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 5544.44)(val);
+      document.getElementById("result").textContent = val + " lb/ft³ = " + result.toFixed(6) + " slug/in³";
+    }
+  </script>
+</body>
+</html>

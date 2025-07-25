@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nanoseconds to Milliseconds | Everything Converter 169</title>
+  <meta name="description" content="Convert nanoseconds to milliseconds for interpreting high-resolution timestamps.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Nanoseconds to Milliseconds</h1>
+  <p>Convert nanoseconds to milliseconds for interpreting high-resolution timestamps.</p>
+  <input type="number" id="input" placeholder="Enter ns">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 1e6)(val);
+      document.getElementById("result").textContent = val + " ns = " + result.toFixed(6) + " ms";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PSI to Inches of Mercury | Everything Converter 169</title>
+  <meta name="description" content="Transform PSI to inches of mercury for barometric conversions and weather station data.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>PSI to Inches of Mercury</h1>
+  <p>Transform PSI to inches of mercury for barometric conversions and weather station data.</p>
+  <input type="number" id="input" placeholder="Enter psi">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v/0.491154)(val);
+      document.getElementById("result").textContent = val + " psi = " + result.toFixed(6) + " inHg";
+    }
+  </script>
+</body>
+</html>

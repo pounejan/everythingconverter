@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lunar Distance to Kilometers | Everything Converter 169</title>
+  <meta name="description" content="Convert lunar distance to kilometers for moon measurements.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Lunar Distance to Kilometers</h1>
+  <p>Convert lunar distance to kilometers for moon measurements.</p>
+  <input type="number" id="input" placeholder="Enter LD">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 384400)(val);
+      document.getElementById("result").textContent = val + " LD = " + result.toFixed(6) + " km";
+    }
+  </script>
+</body>
+</html>

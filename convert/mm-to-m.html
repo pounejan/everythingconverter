@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Square Millimeters to Square Microns | Everything Converter 169</title>
+  <meta name="description" content="Transform square millimeters to square microns for micro-measurements.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Square Millimeters to Square Microns</h1>
+  <p>Transform square millimeters to square microns for micro-measurements.</p>
+  <input type="number" id="input" placeholder="Enter mm²">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1e6)(val);
+      document.getElementById("result").textContent = val + " mm² = " + result.toFixed(6) + " μm²";
+    }
+  </script>
+</body>
+</html>

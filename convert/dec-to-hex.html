@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Decimal to Base 16 | Everything Converter 169</title>
+  <meta name="description" content="Convert decimal to hexadecimal format.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Decimal to Base 16</h1>
+  <p>Convert decimal to hexadecimal format.</p>
+  <input type="number" id="input" placeholder="Enter dec">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v.toString(16))(val);
+      document.getElementById("result").textContent = val + " dec = " + result.toFixed(6) + " hex";
+    }
+  </script>
+</body>
+</html>

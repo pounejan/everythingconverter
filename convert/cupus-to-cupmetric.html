@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cups (US) to Cups (Metric) | Everything Converter 169</title>
+  <meta name="description" content="Convert US cups to metric cups for accurate volume scaling in cooking.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Cups (US) to Cups (Metric)</h1>
+  <p>Convert US cups to metric cups for accurate volume scaling in cooking.</p>
+  <input type="number" id="input" placeholder="Enter cup(US)">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 0.833333)(val);
+      document.getElementById("result").textContent = val + " cup(US) = " + result.toFixed(6) + " cup(metric)";
+    }
+  </script>
+</body>
+</html>

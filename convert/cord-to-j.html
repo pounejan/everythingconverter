@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wood Cord to Joules | Everything Converter 169</title>
+  <meta name="description" content="Convert cord of wood to joules for renewable energy use.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Wood Cord to Joules</h1>
+  <p>Convert cord of wood to joules for renewable energy use.</p>
+  <input type="number" id="input" placeholder="Enter cord">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v*8e9)(val);
+      document.getElementById("result").textContent = val + " cord = " + result.toFixed(6) + " J";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Microwatts to Watts | Everything Converter 169</title>
+  <meta name="description" content="Transform microwatts to watts for scaling up sensor-level measurements.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Microwatts to Watts</h1>
+  <p>Transform microwatts to watts for scaling up sensor-level measurements.</p>
+  <input type="number" id="input" placeholder="Enter μW">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v/1e6)(val);
+      document.getElementById("result").textContent = val + " μW = " + result.toFixed(6) + " W";
+    }
+  </script>
+</body>
+</html>

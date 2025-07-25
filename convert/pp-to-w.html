@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Planck Power to Watts | Everything Converter 169</title>
+  <meta name="description" content="Transform Planck power to watts for astrophysical unit conversion.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Planck Power to Watts</h1>
+  <p>Transform Planck power to watts for astrophysical unit conversion.</p>
+  <input type="number" id="input" placeholder="Enter Pp">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v*3.62831e52)(val);
+      document.getElementById("result").textContent = val + " Pp = " + result.toFixed(6) + " W";
+    }
+  </script>
+</body>
+</html>

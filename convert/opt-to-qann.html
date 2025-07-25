@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Optimization to Quantum Annealing | Everything Converter 169</title>
+  <meta name="description" content="Transform optimization to quantum annealing for quantum computing.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Optimization to Quantum Annealing</h1>
+  <p>Transform optimization to quantum annealing for quantum computing.</p>
+  <input type="number" id="input" placeholder="Enter Opt">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 1e3)(val);
+      document.getElementById("result").textContent = val + " Opt = " + result.toFixed(6) + " QAnn";
+    }
+  </script>
+</body>
+</html>

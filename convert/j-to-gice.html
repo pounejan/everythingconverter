@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Joules to Ice Melting Energy | Everything Converter 169</title>
+  <meta name="description" content="Convert joules to the energy required to melt ice (80 J/g).">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Joules to Ice Melting Energy</h1>
+  <p>Convert joules to the energy required to melt ice (80 J/g).</p>
+  <input type="number" id="input" placeholder="Enter J">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v/80)(val);
+      document.getElementById("result").textContent = val + " J = " + result.toFixed(6) + " gIce";
+    }
+  </script>
+</body>
+</html>

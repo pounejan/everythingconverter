@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cosmic Velocity to Meters/second | Everything Converter 169</title>
+  <meta name="description" content="Convert cosmic velocity to meters per second for astronomy.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Cosmic Velocity to Meters/second</h1>
+  <p>Convert cosmic velocity to meters per second for astronomy.</p>
+  <input type="number" id="input" placeholder="Enter vc">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 42100)(val);
+      document.getElementById("result").textContent = val + " vc = " + result.toFixed(6) + " m/s";
+    }
+  </script>
+</body>
+</html>

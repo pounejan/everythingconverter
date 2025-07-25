@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Speed of Sound to Meters/second | Everything Converter 169</title>
+  <meta name="description" content="Convert speed of sound to meters per second for acoustic calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Speed of Sound to Meters/second</h1>
+  <p>Convert speed of sound to meters per second for acoustic calculations.</p>
+  <input type="number" id="input" placeholder="Enter sound">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 343)(val);
+      document.getElementById("result").textContent = val + " sound = " + result.toFixed(6) + " m/s";
+    }
+  </script>
+</body>
+</html>

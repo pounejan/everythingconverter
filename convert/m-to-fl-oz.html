@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cubic Meters to Fluid Ounces | Everything Converter 169</title>
+  <meta name="description" content="Convert cubic meters to fluid ounces for bulk liquids.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Cubic Meters to Fluid Ounces</h1>
+  <p>Convert cubic meters to fluid ounces for bulk liquids.</p>
+  <input type="number" id="input" placeholder="Enter m³">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 33814)(val);
+      document.getElementById("result").textContent = val + " m³ = " + result.toFixed(6) + " fl oz";
+    }
+  </script>
+</body>
+</html>

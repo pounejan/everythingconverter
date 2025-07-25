@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ounces‑troy to Kilograms | Everything Converter 169</title>
+  <meta name="description" content="Convert troy ounces to kilograms for bullion and metals trading.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Ounces‑troy to Kilograms</h1>
+  <p>Convert troy ounces to kilograms for bullion and metals trading.</p>
+  <input type="number" id="input" placeholder="Enter oz t">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => (v * 31.1035) / 1000)(val);
+      document.getElementById("result").textContent = val + " oz t = " + result.toFixed(6) + " kg";
+    }
+  </script>
+</body>
+</html>

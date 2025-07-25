@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Indian Rupee to US Dollar | Everything Converter 169</title>
+  <meta name="description" content="Convert Indian Rupee to US Dollar for currency conversion and investments.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Indian Rupee to US Dollar</h1>
+  <p>Convert Indian Rupee to US Dollar for currency conversion and investments.</p>
+  <input type="number" id="input" placeholder="Enter INR">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 83.50)(val);
+      document.getElementById("result").textContent = val + " INR = " + result.toFixed(6) + " USD";
+    }
+  </script>
+</body>
+</html>

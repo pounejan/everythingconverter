@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Holographic Pixels to Planck Area | Everything Converter 169</title>
+  <meta name="description" content="Convert holographic pixels to Planck area for holographic principle.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Holographic Pixels to Planck Area</h1>
+  <p>Convert holographic pixels to Planck area for holographic principle.</p>
+  <input type="number" id="input" placeholder="Enter hpx">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 2.61e-70)(val);
+      document.getElementById("result").textContent = val + " hpx = " + result.toFixed(6) + " AP";
+    }
+  </script>
+</body>
+</html>

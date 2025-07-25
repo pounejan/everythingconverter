@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Business Days to Weeks | Everything Converter 169</title>
+  <meta name="description" content="Convert business days to weeks assuming a 5-day workweek.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Business Days to Weeks</h1>
+  <p>Convert business days to weeks assuming a 5-day workweek.</p>
+  <input type="number" id="input" placeholder="Enter bd">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 5)(val);
+      document.getElementById("result").textContent = val + " bd = " + result.toFixed(6) + " wk";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Square Feet to Hectares | Everything Converter 169</title>
+  <meta name="description" content="Transform square feet to hectares for property conversions.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Square Feet to Hectares</h1>
+  <p>Transform square feet to hectares for property conversions.</p>
+  <input type="number" id="input" placeholder="Enter ft²">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 107639.104)(val);
+      document.getElementById("result").textContent = val + " ft² = " + result.toFixed(6) + " ha";
+    }
+  </script>
+</body>
+</html>

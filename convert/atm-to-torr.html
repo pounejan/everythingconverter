@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Atmosphere to Torr | Everything Converter 169</title>
+  <meta name="description" content="Transform atmosphere to torr for cleanroom and controlled lab settings.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Atmosphere to Torr</h1>
+  <p>Transform atmosphere to torr for cleanroom and controlled lab settings.</p>
+  <input type="number" id="input" placeholder="Enter atm">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v*760)(val);
+      document.getElementById("result").textContent = val + " atm = " + result.toFixed(6) + " Torr";
+    }
+  </script>
+</body>
+</html>

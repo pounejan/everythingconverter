@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mach to Kilometers per Hour | Everything Converter 169</title>
+  <meta name="description" content="Convert Mach to kilometers per hour for supersonic speed estimations in aviation and aerospace.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Mach to Kilometers per Hour</h1>
+  <p>Convert Mach to kilometers per hour for supersonic speed estimations in aviation and aerospace.</p>
+  <input type="number" id="input" placeholder="Enter Mach">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1234.8)(val);
+      document.getElementById("result").textContent = val + " Mach = " + result.toFixed(6) + " km/h";
+    }
+  </script>
+</body>
+</html>

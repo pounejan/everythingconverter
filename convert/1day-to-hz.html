@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Daily Oscillations to Hertz | Everything Converter 169</title>
+  <meta name="description" content="Convert daily events to hertz for rare frequencies.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Daily Oscillations to Hertz</h1>
+  <p>Convert daily events to hertz for rare frequencies.</p>
+  <input type="number" id="input" placeholder="Enter 1/day">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 86400)(val);
+      document.getElementById("result").textContent = val + " 1/day = " + result.toFixed(6) + " Hz";
+    }
+  </script>
+</body>
+</html>

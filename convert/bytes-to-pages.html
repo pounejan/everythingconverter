@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RAM Size to Pages | Everything Converter 169</title>
+  <meta name="description" content="Convert RAM size in bytes to OS pages (4KB).">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>RAM Size to Pages</h1>
+  <p>Convert RAM size in bytes to OS pages (4KB).</p>
+  <input type="number" id="input" placeholder="Enter bytes">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 4096)(val);
+      document.getElementById("result").textContent = val + " bytes = " + result.toFixed(6) + " pages";
+    }
+  </script>
+</body>
+</html>

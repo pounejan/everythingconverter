@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gigaparsecs to Light Years | Everything Converter 169</title>
+  <meta name="description" content="Convert gigaparsecs to light years for cosmological distances.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Gigaparsecs to Light Years</h1>
+  <p>Convert gigaparsecs to light years for cosmological distances.</p>
+  <input type="number" id="input" placeholder="Enter Gpc">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 3.26e9)(val);
+      document.getElementById("result").textContent = val + " Gpc = " + result.toFixed(6) + " ly";
+    }
+  </script>
+</body>
+</html>

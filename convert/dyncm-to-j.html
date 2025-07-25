@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dyne·cm to Joules | Everything Converter 169</title>
+  <meta name="description" content="Convert dyne-centimeters to joules for CGS-to-SI conversion.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Dyne·cm to Joules</h1>
+  <p>Convert dyne-centimeters to joules for CGS-to-SI conversion.</p>
+  <input type="number" id="input" placeholder="Enter dyn·cm">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v/1e7)(val);
+      document.getElementById("result").textContent = val + " dyn·cm = " + result.toFixed(6) + " J";
+    }
+  </script>
+</body>
+</html>

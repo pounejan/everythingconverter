@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pints to Quarts | Everything Converter 169</title>
+  <meta name="description" content="Convert pints to quarts for liquid measures.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Pints to Quarts</h1>
+  <p>Convert pints to quarts for liquid measures.</p>
+  <input type="number" id="input" placeholder="Enter pt">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 2)(val);
+      document.getElementById("result").textContent = val + " pt = " + result.toFixed(6) + " qt";
+    }
+  </script>
+</body>
+</html>

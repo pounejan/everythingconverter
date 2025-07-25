@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Square Yards to Square Perches | Everything Converter 169</title>
+  <meta name="description" content="Transform square yards to square perches for land use history.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Square Yards to Square Perches</h1>
+  <p>Transform square yards to square perches for land use history.</p>
+  <input type="number" id="input" placeholder="Enter yd²">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 30.25)(val);
+      document.getElementById("result").textContent = val + " yd² = " + result.toFixed(6) + " perch²";
+    }
+  </script>
+</body>
+</html>

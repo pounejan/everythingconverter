@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Meters/second to Terminal Velocity | Everything Converter 169</title>
+  <meta name="description" content="Transform meters per second to terminal velocity for falling objects.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Meters/second to Terminal Velocity</h1>
+  <p>Transform meters per second to terminal velocity for falling objects.</p>
+  <input type="number" id="input" placeholder="Enter m/s">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 56)(val);
+      document.getElementById("result").textContent = val + " m/s = " + result.toFixed(6) + " vt";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gigaelectron Volts to Megaelectron Volts | Everything Converter 169</title>
+  <meta name="description" content="Transform gigaelectron volts to megaelectron volts for particle energy calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Gigaelectron Volts to Megaelectron Volts</h1>
+  <p>Transform gigaelectron volts to megaelectron volts for particle energy calculations.</p>
+  <input type="number" id="input" placeholder="Enter GeV">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1000)(val);
+      document.getElementById("result").textContent = val + " GeV = " + result.toFixed(6) + " MeV";
+    }
+  </script>
+</body>
+</html>

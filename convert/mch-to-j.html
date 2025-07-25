@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Methane Cubic Meter to Joules | Everything Converter 169</title>
+  <meta name="description" content="Convert cubic meter of methane to joules for gas distribution.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Methane Cubic Meter to Joules</h1>
+  <p>Convert cubic meter of methane to joules for gas distribution.</p>
+  <input type="number" id="input" placeholder="Enter m³CH₄">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v*3.55e7)(val);
+      document.getElementById("result").textContent = val + " m³CH₄ = " + result.toFixed(6) + " J";
+    }
+  </script>
+</body>
+</html>

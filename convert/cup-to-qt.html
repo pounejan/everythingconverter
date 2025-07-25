@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cups to Quarts | Everything Converter 169</title>
+  <meta name="description" content="Transform cups to quarts for volume conversions.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Cups to Quarts</h1>
+  <p>Transform cups to quarts for volume conversions.</p>
+  <input type="number" id="input" placeholder="Enter cup">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 4)(val);
+      document.getElementById("result").textContent = val + " cup = " + result.toFixed(6) + " qt";
+    }
+  </script>
+</body>
+</html>

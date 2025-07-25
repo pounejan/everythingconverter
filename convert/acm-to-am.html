@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Amperes per Square Centimeter to Amperes per Square Meter | Everything Converter 169</title>
+  <meta name="description" content="Transform amperes per square centimeter to amperes per square meter for current density calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Amperes per Square Centimeter to Amperes per Square Meter</h1>
+  <p>Transform amperes per square centimeter to amperes per square meter for current density calculations.</p>
+  <input type="number" id="input" placeholder="Enter A/cm²">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 10000)(val);
+      document.getElementById("result").textContent = val + " A/cm² = " + result.toFixed(6) + " A/m²";
+    }
+  </script>
+</body>
+</html>

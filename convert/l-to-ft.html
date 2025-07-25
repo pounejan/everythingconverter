@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Liters to Cubic Feet | Everything Converter 169</title>
+  <meta name="description" content="Convert liters to cubic feet for engineering and architectural volume conversions.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Liters to Cubic Feet</h1>
+  <p>Convert liters to cubic feet for engineering and architectural volume conversions.</p>
+  <input type="number" id="input" placeholder="Enter L">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 28.3168)(val);
+      document.getElementById("result").textContent = val + " L = " + result.toFixed(6) + " ft³";
+    }
+  </script>
+</body>
+</html>

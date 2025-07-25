@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Horizon to Schwarzschild Radius | Everything Converter 169</title>
+  <meta name="description" content="Convert event horizon to Schwarzschild radius for black hole physics.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Event Horizon to Schwarzschild Radius</h1>
+  <p>Convert event horizon to Schwarzschild radius for black hole physics.</p>
+  <input type="number" id="input" placeholder="Enter EH">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1)(val);
+      document.getElementById("result").textContent = val + " EH = " + result.toFixed(6) + " rs";
+    }
+  </script>
+</body>
+</html>

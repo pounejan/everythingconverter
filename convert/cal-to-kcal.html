@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calories to Kilocalories | Everything Converter 169</title>
+  <meta name="description" content="Transform calories to kilocalories for nutritional calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Calories to Kilocalories</h1>
+  <p>Transform calories to kilocalories for nutritional calculations.</p>
+  <input type="number" id="input" placeholder="Enter cal">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 1000)(val);
+      document.getElementById("result").textContent = val + " cal = " + result.toFixed(6) + " kcal";
+    }
+  </script>
+</body>
+</html>

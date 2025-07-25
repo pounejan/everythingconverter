@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Am² to Gauss·cm³ | Everything Converter 169</title>
+  <meta name="description" content="Convert ampere-square meter to gauss·cubic centimeters.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Am² to Gauss·cm³</h1>
+  <p>Convert ampere-square meter to gauss·cubic centimeters.</p>
+  <input type="number" id="input" placeholder="Enter Am²">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1000)(val);
+      document.getElementById("result").textContent = val + " Am² = " + result.toFixed(6) + " G·cm³";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>H/m to A/m | Everything Converter 169</title>
+  <meta name="description" content="Transform henry per meter to ampere per meter with μ₀.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>H/m to A/m</h1>
+  <p>Transform henry per meter to ampere per meter with μ₀.</p>
+  <input type="number" id="input" placeholder="Enter H/m">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / (4 * Math.PI * 1e-7))(val);
+      document.getElementById("result").textContent = val + " H/m = " + result.toFixed(6) + " A/m";
+    }
+  </script>
+</body>
+</html>

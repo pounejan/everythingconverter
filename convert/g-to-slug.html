@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grams to Slugs | Everything Converter 169</title>
+  <meta name="description" content="Convert grams to slugs for imperial physics.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Grams to Slugs</h1>
+  <p>Convert grams to slugs for imperial physics.</p>
+  <input type="number" id="input" placeholder="Enter g">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 14593.9)(val);
+      document.getElementById("result").textContent = val + " g = " + result.toFixed(6) + " slug";
+    }
+  </script>
+</body>
+</html>

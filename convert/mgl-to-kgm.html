@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Milligrams per Liter to Kilograms per Cubic Meter | Everything Converter 169</title>
+  <meta name="description" content="Convert milligrams per liter to kilograms per cubic meter for water quality and density analysis.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Milligrams per Liter to Kilograms per Cubic Meter</h1>
+  <p>Convert milligrams per liter to kilograms per cubic meter for water quality and density analysis.</p>
+  <input type="number" id="input" placeholder="Enter mg/L">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 1e3)(val);
+      document.getElementById("result").textContent = val + " mg/L = " + result.toFixed(6) + " kg/m³";
+    }
+  </script>
+</body>
+</html>

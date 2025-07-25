@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pounds per Gallon (UK) to Grams per Liter | Everything Converter 169</title>
+  <meta name="description" content="Convert pounds per UK gallon to grams per liter for precise density calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Pounds per Gallon (UK) to Grams per Liter</h1>
+  <p>Convert pounds per UK gallon to grams per liter for precise density calculations.</p>
+  <input type="number" id="input" placeholder="Enter lb/gal(UK)">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 10.022)(val);
+      document.getElementById("result").textContent = val + " lb/gal(UK) = " + result.toFixed(6) + " g/L";
+    }
+  </script>
+</body>
+</html>

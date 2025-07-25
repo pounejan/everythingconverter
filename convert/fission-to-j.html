@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nuclear Fission to Joules | Everything Converter 169</title>
+  <meta name="description" content="Convert fission reactions to joules.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Nuclear Fission to Joules</h1>
+  <p>Convert fission reactions to joules.</p>
+  <input type="number" id="input" placeholder="Enter fission">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v*3.2e-11)(val);
+      document.getElementById("result").textContent = val + " fission = " + result.toFixed(6) + " J";
+    }
+  </script>
+</body>
+</html>

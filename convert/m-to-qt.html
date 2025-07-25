@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cubic Meters to Quarts | Everything Converter 169</title>
+  <meta name="description" content="Convert cubic meters to quarts for liquid conversions.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Cubic Meters to Quarts</h1>
+  <p>Convert cubic meters to quarts for liquid conversions.</p>
+  <input type="number" id="input" placeholder="Enter m³">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1056.69)(val);
+      document.getElementById("result").textContent = val + " m³ = " + result.toFixed(6) + " qt";
+    }
+  </script>
+</body>
+</html>

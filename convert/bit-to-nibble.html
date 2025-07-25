@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bit to Nibble | Everything Converter 169</title>
+  <meta name="description" content="Convert bit to nibble for small-scale digital data conversions.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Bit to Nibble</h1>
+  <p>Convert bit to nibble for small-scale digital data conversions.</p>
+  <input type="number" id="input" placeholder="Enter bit">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 4)(val);
+      document.getElementById("result").textContent = val + " bit = " + result.toFixed(6) + " nibble";
+    }
+  </script>
+</body>
+</html>

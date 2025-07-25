@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Milligrams to Tonnes | Everything Converter 169</title>
+  <meta name="description" content="Transform milligrams to metric tonnes for extreme scaling.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Milligrams to Tonnes</h1>
+  <p>Transform milligrams to metric tonnes for extreme scaling.</p>
+  <input type="number" id="input" placeholder="Enter mg">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 1e9)(val);
+      document.getElementById("result").textContent = val + " mg = " + result.toFixed(6) + " t";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Polish Zloty to Euro | Everything Converter 169</title>
+  <meta name="description" content="Convert Polish Zloty to Euro for currency conversion and trade.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Polish Zloty to Euro</h1>
+  <p>Convert Polish Zloty to Euro for currency conversion and trade.</p>
+  <input type="number" id="input" placeholder="Enter PLN">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 4.75)(val);
+      document.getElementById("result").textContent = val + " PLN = " + result.toFixed(6) + " EUR";
+    }
+  </script>
+</body>
+</html>

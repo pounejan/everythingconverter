@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gibibyte to Tebibyte | Everything Converter 169</title>
+  <meta name="description" content="Convert gibibyte to tebibyte for very large binary data units.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Gibibyte to Tebibyte</h1>
+  <p>Convert gibibyte to tebibyte for very large binary data units.</p>
+  <input type="number" id="input" placeholder="Enter GiB">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 1024)(val);
+      document.getElementById("result").textContent = val + " GiB = " + result.toFixed(6) + " TiB";
+    }
+  </script>
+</body>
+</html>

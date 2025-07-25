@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Barrels (beer) to Gallons | Everything Converter 169</title>
+  <meta name="description" content="Convert beer barrels to gallons for brewery volume.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Barrels (beer) to Gallons</h1>
+  <p>Convert beer barrels to gallons for brewery volume.</p>
+  <input type="number" id="input" placeholder="Enter bbl (beer)">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 31)(val);
+      document.getElementById("result").textContent = val + " bbl (beer) = " + result.toFixed(6) + " gal";
+    }
+  </script>
+</body>
+</html>

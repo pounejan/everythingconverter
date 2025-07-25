@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Megadaltons to Kilodaltons | Everything Converter 169</title>
+  <meta name="description" content="Convert megadaltons to kilodaltons for very large molecular mass.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Megadaltons to Kilodaltons</h1>
+  <p>Convert megadaltons to kilodaltons for very large molecular mass.</p>
+  <input type="number" id="input" placeholder="Enter MDa">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1000)(val);
+      document.getElementById("result").textContent = val + " MDa = " + result.toFixed(6) + " kDa";
+    }
+  </script>
+</body>
+</html>

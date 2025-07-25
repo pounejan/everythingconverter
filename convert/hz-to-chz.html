@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hertz to Centihertz | Everything Converter 169</title>
+  <meta name="description" content="Convert hertz to centihertz for small-scale frequency analysis.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Hertz to Centihertz</h1>
+  <p>Convert hertz to centihertz for small-scale frequency analysis.</p>
+  <input type="number" id="input" placeholder="Enter Hz">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 100)(val);
+      document.getElementById("result").textContent = val + " Hz = " + result.toFixed(6) + " cHz";
+    }
+  </script>
+</body>
+</html>

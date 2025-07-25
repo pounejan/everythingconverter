@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Megaelectron Volts to Kiloelectron Volts | Everything Converter 169</title>
+  <meta name="description" content="Transform megaelectron volts to kiloelectron volts for particle energy calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Megaelectron Volts to Kiloelectron Volts</h1>
+  <p>Transform megaelectron volts to kiloelectron volts for particle energy calculations.</p>
+  <input type="number" id="input" placeholder="Enter MeV">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1000)(val);
+      document.getElementById("result").textContent = val + " MeV = " + result.toFixed(6) + " keV";
+    }
+  </script>
+</body>
+</html>

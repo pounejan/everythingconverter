@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Centuries to Years | Everything Converter 169</title>
+  <meta name="description" content="Convert centuries to years for academic and historical records.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Centuries to Years</h1>
+  <p>Convert centuries to years for academic and historical records.</p>
+  <input type="number" id="input" placeholder="Enter cent">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 100)(val);
+      document.getElementById("result").textContent = val + " cent = " + result.toFixed(6) + " yr";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feet per Second to Centimeters per Second | Everything Converter 169</title>
+  <meta name="description" content="Convert feet per second to centimeters per second for detailed motion analysis.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Feet per Second to Centimeters per Second</h1>
+  <p>Convert feet per second to centimeters per second for detailed motion analysis.</p>
+  <input type="number" id="input" placeholder="Enter ft/s">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 0.0328084)(val);
+      document.getElementById("result").textContent = val + " ft/s = " + result.toFixed(6) + " cm/s";
+    }
+  </script>
+</body>
+</html>

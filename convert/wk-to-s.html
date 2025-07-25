@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weeks to Seconds | Everything Converter 169</title>
+  <meta name="description" content="Transform weeks to seconds for precise timing.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Weeks to Seconds</h1>
+  <p>Transform weeks to seconds for precise timing.</p>
+  <input type="number" id="input" placeholder="Enter wk">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 604800)(val);
+      document.getElementById("result").textContent = val + " wk = " + result.toFixed(6) + " s";
+    }
+  </script>
+</body>
+</html>

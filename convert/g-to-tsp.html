@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grams to Teaspoons (Salt) | Everything Converter 169</title>
+  <meta name="description" content="Transform grams to teaspoons for salt to follow low-sodium or precise recipes.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Grams to Teaspoons (Salt)</h1>
+  <p>Transform grams to teaspoons for salt to follow low-sodium or precise recipes.</p>
+  <input type="number" id="input" placeholder="Enter g">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (val => val / 5.9)(val);
+      document.getElementById("result").textContent = val + " g = " + result.toFixed(6) + " tsp";
+    }
+  </script>
+</body>
+</html>

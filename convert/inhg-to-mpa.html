@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inches of Mercury to Megapascal | Everything Converter 169</title>
+  <meta name="description" content="Convert inHg to MPa for lab-grade vacuum pressure systems.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Inches of Mercury to Megapascal</h1>
+  <p>Convert inHg to MPa for lab-grade vacuum pressure systems.</p>
+  <input type="number" id="input" placeholder="Enter inHg">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v*0.00338639)(val);
+      document.getElementById("result").textContent = val + " inHg = " + result.toFixed(6) + " MPa";
+    }
+  </script>
+</body>
+</html>

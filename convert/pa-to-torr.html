@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pascals to Torr | Everything Converter 169</title>
+  <meta name="description" content="Transform pascals to torr for precision gas studies.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Pascals to Torr</h1>
+  <p>Transform pascals to torr for precision gas studies.</p>
+  <input type="number" id="input" placeholder="Enter Pa">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v/133.322)(val);
+      document.getElementById("result").textContent = val + " Pa = " + result.toFixed(6) + " Torr";
+    }
+  </script>
+</body>
+</html>

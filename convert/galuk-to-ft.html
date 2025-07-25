@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallons (UK) to Cubic Feet | Everything Converter 169</title>
+  <meta name="description" content="Convert UK gallons to cubic feet for British volume measurement in construction and shipping.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Gallons (UK) to Cubic Feet</h1>
+  <p>Convert UK gallons to cubic feet for British volume measurement in construction and shipping.</p>
+  <input type="number" id="input" placeholder="Enter gal(UK)">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 0.160544)(val);
+      document.getElementById("result").textContent = val + " gal(UK) = " + result.toFixed(6) + " ft³";
+    }
+  </script>
+</body>
+</html>

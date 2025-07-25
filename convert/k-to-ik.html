@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kelvin to InfraKelvin | Everything Converter 169</title>
+  <meta name="description" content="Convert Kelvin to InfraKelvin for dark energy field experiments.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Kelvin to InfraKelvin</h1>
+  <p>Convert Kelvin to InfraKelvin for dark energy field experiments.</p>
+  <input type="number" id="input" placeholder="Enter K">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>(v-273.15-0.00001))(val);
+      document.getElementById("result").textContent = val + " K = " + result.toFixed(6) + " IK";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wind Turbine Hour to Joules | Everything Converter 169</title>
+  <meta name="description" content="Convert wind turbine output to joules.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Wind Turbine Hour to Joules</h1>
+  <p>Convert wind turbine output to joules.</p>
+  <input type="number" id="input" placeholder="Enter turbine·h">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v*3.6e6)(val);
+      document.getElementById("result").textContent = val + " turbine·h = " + result.toFixed(6) + " J";
+    }
+  </script>
+</body>
+</html>

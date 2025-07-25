@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Visible Light Velocity to Meters/second | Everything Converter 169</title>
+  <meta name="description" content="Convert visible light velocity to meters per second for optics.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Visible Light Velocity to Meters/second</h1>
+  <p>Convert visible light velocity to meters per second for optics.</p>
+  <input type="number" id="input" placeholder="Enter vvis">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 299792458)(val);
+      document.getElementById("result").textContent = val + " vvis = " + result.toFixed(6) + " m/s";
+    }
+  </script>
+</body>
+</html>

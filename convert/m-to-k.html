@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Megohms to Kiloohms | Everything Converter 169</title>
+  <meta name="description" content="Transform megohms to kiloohms for resistance calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Megohms to Kiloohms</h1>
+  <p>Transform megohms to kiloohms for resistance calculations.</p>
+  <input type="number" id="input" placeholder="Enter MΩ">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1000)(val);
+      document.getElementById("result").textContent = val + " MΩ = " + result.toFixed(6) + " kΩ";
+    }
+  </script>
+</body>
+</html>

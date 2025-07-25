@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Minutes to Work Hours | Everything Converter 169</title>
+  <meta name="description" content="Transform minutes to work hours for employee logs.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Minutes to Work Hours</h1>
+  <p>Transform minutes to work hours for employee logs.</p>
+  <input type="number" id="input" placeholder="Enter min">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 60)(val);
+      document.getElementById("result").textContent = val + " min = " + result.toFixed(6) + " wh";
+    }
+  </script>
+</body>
+</html>

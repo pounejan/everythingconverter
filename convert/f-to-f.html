@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Microfarads to Farads | Everything Converter 169</title>
+  <meta name="description" content="Transform microfarads to farads for capacitance calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Microfarads to Farads</h1>
+  <p>Transform microfarads to farads for capacitance calculations.</p>
+  <input type="number" id="input" placeholder="Enter μF">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 1000000)(val);
+      document.getElementById("result").textContent = val + " μF = " + result.toFixed(6) + " F";
+    }
+  </script>
+</body>
+</html>

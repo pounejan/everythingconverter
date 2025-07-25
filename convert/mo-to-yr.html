@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Months to Years | Everything Converter 169</title>
+  <meta name="description" content="Transform months to years for long-term calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Months to Years</h1>
+  <p>Transform months to years for long-term calculations.</p>
+  <input type="number" id="input" placeholder="Enter mo">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 12)(val);
+      document.getElementById("result").textContent = val + " mo = " + result.toFixed(6) + " yr";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Square Chains to Acres | Everything Converter 169</title>
+  <meta name="description" content="Convert square chains to acres for land surveying.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Square Chains to Acres</h1>
+  <p>Convert square chains to acres for land surveying.</p>
+  <input type="number" id="input" placeholder="Enter ch²">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 10)(val);
+      document.getElementById("result").textContent = val + " ch² = " + result.toFixed(6) + " acres";
+    }
+  </script>
+</body>
+</html>

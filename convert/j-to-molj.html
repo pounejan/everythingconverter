@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Joules to AvogadroEnergy | Everything Converter 169</title>
+  <meta name="description" content="Convert joules to per-mole particle energy using Avogadro constant.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Joules to AvogadroEnergy</h1>
+  <p>Convert joules to per-mole particle energy using Avogadro constant.</p>
+  <input type="number" id="input" placeholder="Enter J">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v*6.022e23)(val);
+      document.getElementById("result").textContent = val + " J = " + result.toFixed(6) + " mol·J";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tons of Refrigeration to Watts | Everything Converter 169</title>
+  <meta name="description" content="Transform tons of refrigeration to watts for cooling system load planning.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Tons of Refrigeration to Watts</h1>
+  <p>Transform tons of refrigeration to watts for cooling system load planning.</p>
+  <input type="number" id="input" placeholder="Enter TR">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v*3516.85)(val);
+      document.getElementById("result").textContent = val + " TR = " + result.toFixed(6) + " W";
+    }
+  </script>
+</body>
+</html>

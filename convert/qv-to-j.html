@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quantum Vacuum to Energy | Everything Converter 169</title>
+  <meta name="description" content="Convert quantum vacuum to energy for quantum field theory.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Quantum Vacuum to Energy</h1>
+  <p>Convert quantum vacuum to energy for quantum field theory.</p>
+  <input type="number" id="input" placeholder="Enter QV">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1e-19)(val);
+      document.getElementById("result").textContent = val + " QV = " + result.toFixed(6) + " J";
+    }
+  </script>
+</body>
+</html>

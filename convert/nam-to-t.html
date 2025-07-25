@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>N/(A·m) to Tesla | Everything Converter 169</title>
+  <meta name="description" content="Transform newton per ampere meter to tesla in Lorentz force law.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>N/(A·m) to Tesla</h1>
+  <p>Transform newton per ampere meter to tesla in Lorentz force law.</p>
+  <input type="number" id="input" placeholder="Enter N/(A·m)">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1)(val);
+      document.getElementById("result").textContent = val + " N/(A·m) = " + result.toFixed(6) + " T";
+    }
+  </script>
+</body>
+</html>

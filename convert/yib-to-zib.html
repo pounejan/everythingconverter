@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yobibyte to Zebibyte | Everything Converter 169</title>
+  <meta name="description" content="Convert yobibyte to zebibyte for top-tier digital data management.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Yobibyte to Zebibyte</h1>
+  <p>Convert yobibyte to zebibyte for top-tier digital data management.</p>
+  <input type="number" id="input" placeholder="Enter YiB">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1024)(val);
+      document.getElementById("result").textContent = val + " YiB = " + result.toFixed(6) + " ZiB";
+    }
+  </script>
+</body>
+</html>

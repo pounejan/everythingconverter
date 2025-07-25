@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Business Hours to Days | Everything Converter 169</title>
+  <meta name="description" content="Convert business hours to 8-hour business days.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Business Hours to Days</h1>
+  <p>Convert business hours to 8-hour business days.</p>
+  <input type="number" id="input" placeholder="Enter bh">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 8)(val);
+      document.getElementById("result").textContent = val + " bh = " + result.toFixed(6) + " bd";
+    }
+  </script>
+</body>
+</html>

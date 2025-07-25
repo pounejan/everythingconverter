@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Planck to Delisle | Everything Converter 169</title>
+  <meta name="description" content="Transform Planck temperature to Delisle for theoretical thermal translation.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Planck to Delisle</h1>
+  <p>Transform Planck temperature to Delisle for theoretical thermal translation.</p>
+  <input type="number" id="input" placeholder="Enter Tp">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>((373.15-1.417e32*v)*3/2))(val);
+      document.getElementById("result").textContent = val + " Tp = " + result.toFixed(6) + " °De";
+    }
+  </script>
+</body>
+</html>

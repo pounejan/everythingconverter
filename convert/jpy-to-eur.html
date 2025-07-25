@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Japanese Yen to Euro | Everything Converter 169</title>
+  <meta name="description" content="Convert Japanese Yen to Euro for currency conversion in international markets.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Japanese Yen to Euro</h1>
+  <p>Convert Japanese Yen to Euro for currency conversion in international markets.</p>
+  <input type="number" id="input" placeholder="Enter JPY">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 153.8)(val);
+      document.getElementById("result").textContent = val + " JPY = " + result.toFixed(6) + " EUR";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Israeli Shekel to US Dollar | Everything Converter 169</title>
+  <meta name="description" content="Convert Israeli Shekel to US Dollar for financial transactions.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Israeli Shekel to US Dollar</h1>
+  <p>Convert Israeli Shekel to US Dollar for financial transactions.</p>
+  <input type="number" id="input" placeholder="Enter ILS">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 3.67)(val);
+      document.getElementById("result").textContent = val + " ILS = " + result.toFixed(6) + " USD";
+    }
+  </script>
+</body>
+</html>

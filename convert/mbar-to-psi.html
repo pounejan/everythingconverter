@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Millibar to PSI | Everything Converter 169</title>
+  <meta name="description" content="Convert millibar to PSI for aviation and weather balloon data.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Millibar to PSI</h1>
+  <p>Convert millibar to PSI for aviation and weather balloon data.</p>
+  <input type="number" id="input" placeholder="Enter mbar">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v*0.0145038)(val);
+      document.getElementById("result").textContent = val + " mbar = " + result.toFixed(6) + " psi";
+    }
+  </script>
+</body>
+</html>

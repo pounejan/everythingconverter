@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gram-force·cm to Joules | Everything Converter 169</title>
+  <meta name="description" content="Convert gram-force centimeters to joules for metric mechanical systems.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Gram-force·cm to Joules</h1>
+  <p>Convert gram-force centimeters to joules for metric mechanical systems.</p>
+  <input type="number" id="input" placeholder="Enter gf·cm">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v/10197.2)(val);
+      document.getElementById("result").textContent = val + " gf·cm = " + result.toFixed(6) + " J";
+    }
+  </script>
+</body>
+</html>

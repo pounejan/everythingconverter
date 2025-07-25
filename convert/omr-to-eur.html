@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Omani Rial to Euro | Everything Converter 169</title>
+  <meta name="description" content="Convert Omani Rial to Euro for currency conversions and business.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Omani Rial to Euro</h1>
+  <p>Convert Omani Rial to Euro for currency conversions and business.</p>
+  <input type="number" id="input" placeholder="Enter OMR">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 0.41)(val);
+      document.getElementById("result").textContent = val + " OMR = " + result.toFixed(6) + " EUR";
+    }
+  </script>
+</body>
+</html>

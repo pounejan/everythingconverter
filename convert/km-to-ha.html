@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Square Kilometers to Hectares | Everything Converter 169</title>
+  <meta name="description" content="Convert square kilometers to hectares for land management.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Square Kilometers to Hectares</h1>
+  <p>Convert square kilometers to hectares for land management.</p>
+  <input type="number" id="input" placeholder="Enter km²">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 100)(val);
+      document.getElementById("result").textContent = val + " km² = " + result.toFixed(6) + " ha";
+    }
+  </script>
+</body>
+</html>

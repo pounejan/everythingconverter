@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Milligrams to Grains | Everything Converter 169</title>
+  <meta name="description" content="Convert milligrams to grains for micro-mass precision.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Milligrams to Grains</h1>
+  <p>Convert milligrams to grains for micro-mass precision.</p>
+  <input type="number" id="input" placeholder="Enter mg">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 64.7989)(val);
+      document.getElementById("result").textContent = val + " mg = " + result.toFixed(6) + " gr";
+    }
+  </script>
+</body>
+</html>

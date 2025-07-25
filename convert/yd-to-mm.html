@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Square Yards to Square Millimeters | Everything Converter 169</title>
+  <meta name="description" content="Transform square yards to square millimeters for detailed layouts.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Square Yards to Square Millimeters</h1>
+  <p>Transform square yards to square millimeters for detailed layouts.</p>
+  <input type="number" id="input" placeholder="Enter yd²">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 836127)(val);
+      document.getElementById("result").textContent = val + " yd² = " + result.toFixed(6) + " mm²";
+    }
+  </script>
+</body>
+</html>

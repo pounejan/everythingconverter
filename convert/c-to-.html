@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Celsius to EmojiTemp | Everything Converter 169</title>
+  <meta name="description" content="Convert Celsius to EmojiTemp for fun visual temperature indication.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Celsius to EmojiTemp</h1>
+  <p>Convert Celsius to EmojiTemp for fun visual temperature indication.</p>
+  <input type="number" id="input" placeholder="Enter °C">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>(v>30?"🔥":"❄️"))(val);
+      document.getElementById("result").textContent = val + " °C = " + result.toFixed(6) + " 🔥";
+    }
+  </script>
+</body>
+</html>

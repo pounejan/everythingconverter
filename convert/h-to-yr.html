@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hours to Years | Everything Converter 169</title>
+  <meta name="description" content="Transform hours to years for career planning.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Hours to Years</h1>
+  <p>Transform hours to years for career planning.</p>
+  <input type="number" id="input" placeholder="Enter h">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 8760)(val);
+      document.getElementById("result").textContent = val + " h = " + result.toFixed(6) + " yr";
+    }
+  </script>
+</body>
+</html>

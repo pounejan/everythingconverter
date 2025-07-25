@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Picograms to Pounds | Everything Converter 169</title>
+  <meta name="description" content="Transform picograms to pounds for scientific use.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Picograms to Pounds</h1>
+  <p>Transform picograms to pounds for scientific use.</p>
+  <input type="number" id="input" placeholder="Enter pg">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 4.53592e14)(val);
+      document.getElementById("result").textContent = val + " pg = " + result.toFixed(6) + " lb";
+    }
+  </script>
+</body>
+</html>

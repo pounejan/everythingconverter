@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kilometers per Second to Mach | Everything Converter 169</title>
+  <meta name="description" content="Convert kilometers per second to Mach number for speed of sound velocity calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Kilometers per Second to Mach</h1>
+  <p>Convert kilometers per second to Mach number for speed of sound velocity calculations.</p>
+  <input type="number" id="input" placeholder="Enter km/s">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 0.343)(val);
+      document.getElementById("result").textContent = val + " km/s = " + result.toFixed(6) + " Mach";
+    }
+  </script>
+</body>
+</html>

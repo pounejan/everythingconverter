@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hubble Constant to km/s/Mpc | Everything Converter 169</title>
+  <meta name="description" content="Convert Hubble constant for cosmological calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Hubble Constant to km/s/Mpc</h1>
+  <p>Convert Hubble constant for cosmological calculations.</p>
+  <input type="number" id="input" placeholder="Enter H0">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 70)(val);
+      document.getElementById("result").textContent = val + " H0 = " + result.toFixed(6) + " km/s/Mpc";
+    }
+  </script>
+</body>
+</html>

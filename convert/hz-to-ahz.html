@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hertz to Attahertz | Everything Converter 169</title>
+  <meta name="description" content="Convert hertz to attahertz for atomic-level frequencies.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Hertz to Attahertz</h1>
+  <p>Convert hertz to attahertz for atomic-level frequencies.</p>
+  <input type="number" id="input" placeholder="Enter Hz">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1e18)(val);
+      document.getElementById("result").textContent = val + " Hz = " + result.toFixed(6) + " aHz";
+    }
+  </script>
+</body>
+</html>

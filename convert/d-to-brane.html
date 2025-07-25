@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dimensions to Branes | Everything Converter 169</title>
+  <meta name="description" content="Transform dimensions to branes for string theory.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Dimensions to Branes</h1>
+  <p>Transform dimensions to branes for string theory.</p>
+  <input type="number" id="input" placeholder="Enter D">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 11)(val);
+      document.getElementById("result").textContent = val + " D = " + result.toFixed(6) + " brane";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fortnights to Hours | Everything Converter 169</title>
+  <meta name="description" content="Convert fortnights to total hours for resource estimation.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Fortnights to Hours</h1>
+  <p>Convert fortnights to total hours for resource estimation.</p>
+  <input type="number" id="input" placeholder="Enter fn">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 24 * 14)(val);
+      document.getElementById("result").textContent = val + " fn = " + result.toFixed(6) + " h";
+    }
+  </script>
+</body>
+</html>

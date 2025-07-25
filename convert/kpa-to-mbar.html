@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kilopascal to Millibar | Everything Converter 169</title>
+  <meta name="description" content="Transform kilopascal to millibar for atmospheric readings and aviation standards.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Kilopascal to Millibar</h1>
+  <p>Transform kilopascal to millibar for atmospheric readings and aviation standards.</p>
+  <input type="number" id="input" placeholder="Enter kPa">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v/0.1)(val);
+      document.getElementById("result").textContent = val + " kPa = " + result.toFixed(6) + " mbar";
+    }
+  </script>
+</body>
+</html>

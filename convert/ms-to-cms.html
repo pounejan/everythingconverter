@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Meters per Second to Centimeters per Second | Everything Converter 169</title>
+  <meta name="description" content="Convert meters per second to centimeters per second for precise speed measurements in small scale systems.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Meters per Second to Centimeters per Second</h1>
+  <p>Convert meters per second to centimeters per second for precise speed measurements in small scale systems.</p>
+  <input type="number" id="input" placeholder="Enter m/s">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 100)(val);
+      document.getElementById("result").textContent = val + " m/s = " + result.toFixed(6) + " cm/s";
+    }
+  </script>
+</body>
+</html>

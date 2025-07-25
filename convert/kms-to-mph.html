@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kilometers per Second to Miles per Hour | Everything Converter 169</title>
+  <meta name="description" content="Convert kilometers per second to miles per hour for high-speed transport and aerospace velocity conversions.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Kilometers per Second to Miles per Hour</h1>
+  <p>Convert kilometers per second to miles per hour for high-speed transport and aerospace velocity conversions.</p>
+  <input type="number" id="input" placeholder="Enter km/s">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 2236.94)(val);
+      document.getElementById("result").textContent = val + " km/s = " + result.toFixed(6) + " mph";
+    }
+  </script>
+</body>
+</html>

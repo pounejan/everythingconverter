@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Joules to Calories | Everything Converter 169</title>
+  <meta name="description" content="Convert joules to calories for nutritional calculations and energy understanding. Essential for fitness tracking, dietary planning, and understanding energy content in food and exercise.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Joules to Calories</h1>
+  <p>Convert joules to calories for nutritional calculations and energy understanding. Essential for fitness tracking, dietary planning, and understanding energy content in food and exercise.</p>
+  <input type="number" id="input" placeholder="Enter J">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (val => val * 0.239006)(val);
+      document.getElementById("result").textContent = val + " J = " + result.toFixed(6) + " cal";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Slugs to Milligrams | Everything Converter 169</title>
+  <meta name="description" content="Transform slugs to milligrams for scientific conversion.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Slugs to Milligrams</h1>
+  <p>Transform slugs to milligrams for scientific conversion.</p>
+  <input type="number" id="input" placeholder="Enter slug">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1.45939e7)(val);
+      document.getElementById("result").textContent = val + " slug = " + result.toFixed(6) + " mg";
+    }
+  </script>
+</body>
+</html>

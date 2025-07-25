@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yearly Oscillations to Hertz | Everything Converter 169</title>
+  <meta name="description" content="Convert yearly frequency to hertz.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Yearly Oscillations to Hertz</h1>
+  <p>Convert yearly frequency to hertz.</p>
+  <input type="number" id="input" placeholder="Enter 1/yr">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 3.154e7)(val);
+      document.getElementById("result").textContent = val + " 1/yr = " + result.toFixed(6) + " Hz";
+    }
+  </script>
+</body>
+</html>

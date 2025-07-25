@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>US Gallons to Imperial Gallons | Everything Converter 169</title>
+  <meta name="description" content="Transform US gallons to imperial gallons for UK standards.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>US Gallons to Imperial Gallons</h1>
+  <p>Transform US gallons to imperial gallons for UK standards.</p>
+  <input type="number" id="input" placeholder="Enter gal">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 1.20095)(val);
+      document.getElementById("result").textContent = val + " gal = " + result.toFixed(6) + " imp gal";
+    }
+  </script>
+</body>
+</html>

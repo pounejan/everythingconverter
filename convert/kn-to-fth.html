@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Knots to Feet per Hour | Everything Converter 169</title>
+  <meta name="description" content="Convert knots to feet per hour for marine navigation and engineering applications.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Knots to Feet per Hour</h1>
+  <p>Convert knots to feet per hour for marine navigation and engineering applications.</p>
+  <input type="number" id="input" placeholder="Enter kn">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 6076.12)(val);
+      document.getElementById("result").textContent = val + " kn = " + result.toFixed(6) + " ft/h";
+    }
+  </script>
+</body>
+</html>

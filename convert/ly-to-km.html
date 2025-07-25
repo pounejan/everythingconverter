@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Light Years to Kilometers | Everything Converter 169</title>
+  <meta name="description" content="Convert light years to kilometers for astronomical distance calculations and space science. Essential for understanding cosmic distances, stellar measurements, and the scale of the universe.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Light Years to Kilometers</h1>
+  <p>Convert light years to kilometers for astronomical distance calculations and space science. Essential for understanding cosmic distances, stellar measurements, and the scale of the universe.</p>
+  <input type="number" id="input" placeholder="Enter ly">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (val => val * 9.461e12)(val);
+      document.getElementById("result").textContent = val + " ly = " + result.toFixed(6) + " km";
+    }
+  </script>
+</body>
+</html>

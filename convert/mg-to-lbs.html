@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Megagrams to Pounds | Everything Converter 169</title>
+  <meta name="description" content="Convert megagrams to pounds for heavy haul weight.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Megagrams to Pounds</h1>
+  <p>Convert megagrams to pounds for heavy haul weight.</p>
+  <input type="number" id="input" placeholder="Enter Mg">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 2204.62)(val);
+      document.getElementById("result").textContent = val + " Mg = " + result.toFixed(6) + " lbs";
+    }
+  </script>
+</body>
+</html>

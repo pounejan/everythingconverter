@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Canadian Dollar to Euro | Everything Converter 169</title>
+  <meta name="description" content="Convert Canadian Dollar to Euro for cross-border trade and travel budgeting.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Canadian Dollar to Euro</h1>
+  <p>Convert Canadian Dollar to Euro for cross-border trade and travel budgeting.</p>
+  <input type="number" id="input" placeholder="Enter CAD">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 1.50)(val);
+      document.getElementById("result").textContent = val + " CAD = " + result.toFixed(6) + " EUR";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sine to Cosine | Everything Converter 169</title>
+  <meta name="description" content="Convert sine angle to cosine using trigonometry.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Sine to Cosine</h1>
+  <p>Convert sine angle to cosine using trigonometry.</p>
+  <input type="number" id="input" placeholder="Enter sin">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => Math.cos(Math.asin(v)))(val);
+      document.getElementById("result").textContent = val + " sin = " + result.toFixed(6) + " cos";
+    }
+  </script>
+</body>
+</html>

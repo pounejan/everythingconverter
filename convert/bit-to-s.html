@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Information Bits to Entropy | Everything Converter 169</title>
+  <meta name="description" content="Convert information bits to entropy for information theory.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Information Bits to Entropy</h1>
+  <p>Convert information bits to entropy for information theory.</p>
+  <input type="number" id="input" placeholder="Enter bit">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1.38e-23)(val);
+      document.getElementById("result").textContent = val + " bit = " + result.toFixed(6) + " S";
+    }
+  </script>
+</body>
+</html>

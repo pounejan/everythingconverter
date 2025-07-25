@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cuerda to Square Meters | Everything Converter 169</title>
+  <meta name="description" content="Convert cuerda to square meters for Puerto Rican land units.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Cuerda to Square Meters</h1>
+  <p>Convert cuerda to square meters for Puerto Rican land units.</p>
+  <input type="number" id="input" placeholder="Enter cda">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 3930.395625)(val);
+      document.getElementById("result").textContent = val + " cda = " + result.toFixed(6) + " m²";
+    }
+  </script>
+</body>
+</html>

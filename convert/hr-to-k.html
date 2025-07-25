@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hawking Radiation to Temperature | Everything Converter 169</title>
+  <meta name="description" content="Convert Hawking radiation to temperature for black hole physics.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Hawking Radiation to Temperature</h1>
+  <p>Convert Hawking radiation to temperature for black hole physics.</p>
+  <input type="number" id="input" placeholder="Enter HR">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 6.2e-8)(val);
+      document.getElementById("result").textContent = val + " HR = " + result.toFixed(6) + " K";
+    }
+  </script>
+</body>
+</html>

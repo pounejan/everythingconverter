@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PS to Watts | Everything Converter 169</title>
+  <meta name="description" content="Convert PS (metric horsepower) to watts for international automotive standards.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>PS to Watts</h1>
+  <p>Convert PS (metric horsepower) to watts for international automotive standards.</p>
+  <input type="number" id="input" placeholder="Enter PS">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v*735.5)(val);
+      document.getElementById("result").textContent = val + " PS = " + result.toFixed(6) + " W";
+    }
+  </script>
+</body>
+</html>

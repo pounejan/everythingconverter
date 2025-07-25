@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pounds per Gallon (US) to Slugs per Cubic Foot | Everything Converter 169</title>
+  <meta name="description" content="Convert pounds per US gallon to slugs per cubic foot for density unit conversions.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Pounds per Gallon (US) to Slugs per Cubic Foot</h1>
+  <p>Convert pounds per US gallon to slugs per cubic foot for density unit conversions.</p>
+  <input type="number" id="input" placeholder="Enter lb/gal(US)">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 3.732)(val);
+      document.getElementById("result").textContent = val + " lb/gal(US) = " + result.toFixed(6) + " slug/ft³";
+    }
+  </script>
+</body>
+</html>

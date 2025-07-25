@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pounds to Ounces | Everything Converter 169</title>
+  <meta name="description" content="Transform pounds to ounces for detailed weight measurements.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Pounds to Ounces</h1>
+  <p>Transform pounds to ounces for detailed weight measurements.</p>
+  <input type="number" id="input" placeholder="Enter lbs">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 16)(val);
+      document.getElementById("result").textContent = val + " lbs = " + result.toFixed(6) + " oz";
+    }
+  </script>
+</body>
+</html>

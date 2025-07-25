@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Slugs to Metric Tons | Everything Converter 169</title>
+  <meta name="description" content="Convert slugs to metric tons for large‑scale mass conversion.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Slugs to Metric Tons</h1>
+  <p>Convert slugs to metric tons for large‑scale mass conversion.</p>
+  <input type="number" id="input" placeholder="Enter slug">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / (1000 * 0.0685218))(val);
+      document.getElementById("result").textContent = val + " slug = " + result.toFixed(6) + " t";
+    }
+  </script>
+</body>
+</html>

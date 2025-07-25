@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Milliliters to Ounces | Everything Converter 169</title>
+  <meta name="description" content="Transform milliliters to ounces for accurate liquid portioning and food prep.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Milliliters to Ounces</h1>
+  <p>Transform milliliters to ounces for accurate liquid portioning and food prep.</p>
+  <input type="number" id="input" placeholder="Enter ml">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (val => val / 29.5735)(val);
+      document.getElementById("result").textContent = val + " ml = " + result.toFixed(6) + " oz";
+    }
+  </script>
+</body>
+</html>

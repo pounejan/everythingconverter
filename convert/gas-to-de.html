@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gas Mark to Delisle | Everything Converter 169</title>
+  <meta name="description" content="Convert Gas Mark to Delisle for legacy oven calibration.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Gas Mark to Delisle</h1>
+  <p>Convert Gas Mark to Delisle for legacy oven calibration.</p>
+  <input type="number" id="input" placeholder="Enter Gas">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>((373.15-(v*14+121))*3/2))(val);
+      document.getElementById("result").textContent = val + " Gas = " + result.toFixed(6) + " °De";
+    }
+  </script>
+</body>
+</html>

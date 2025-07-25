@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gibibyte to Gigabyte | Everything Converter 169</title>
+  <meta name="description" content="Convert gibibyte to gigabyte for metric vs binary storage evaluations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Gibibyte to Gigabyte</h1>
+  <p>Convert gibibyte to gigabyte for metric vs binary storage evaluations.</p>
+  <input type="number" id="input" placeholder="Enter GiB">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1073741824 / 1000000000)(val);
+      document.getElementById("result").textContent = val + " GiB = " + result.toFixed(6) + " GB";
+    }
+  </script>
+</body>
+</html>

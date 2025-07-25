@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rankine to MicroCelsius | Everything Converter 169</title>
+  <meta name="description" content="Convert Rankine to MicroCelsius for fine-grained temperature sensing.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Rankine to MicroCelsius</h1>
+  <p>Convert Rankine to MicroCelsius for fine-grained temperature sensing.</p>
+  <input type="number" id="input" placeholder="Enter °R">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>((v*5/9-273.15)*1e6))(val);
+      document.getElementById("result").textContent = val + " °R = " + result.toFixed(6) + " µ°C";
+    }
+  </script>
+</body>
+</html>

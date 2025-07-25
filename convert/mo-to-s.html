@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Months to Seconds | Everything Converter 169</title>
+  <meta name="description" content="Transform months to seconds for precise calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Months to Seconds</h1>
+  <p>Transform months to seconds for precise calculations.</p>
+  <input type="number" id="input" placeholder="Enter mo">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 2628000)(val);
+      document.getElementById("result").textContent = val + " mo = " + result.toFixed(6) + " s";
+    }
+  </script>
+</body>
+</html>

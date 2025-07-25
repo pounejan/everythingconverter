@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Carats to Atomic Mass Units | Everything Converter 169</title>
+  <meta name="description" content="Convert carats to AMU for gemology and physics.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Carats to Atomic Mass Units</h1>
+  <p>Convert carats to AMU for gemology and physics.</p>
+  <input type="number" id="input" placeholder="Enter ct">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1.20407e24)(val);
+      document.getElementById("result").textContent = val + " ct = " + result.toFixed(6) + " amu";
+    }
+  </script>
+</body>
+</html>

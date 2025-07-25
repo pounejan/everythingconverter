@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Earth Masses to Jupiter Masses | Everything Converter 169</title>
+  <meta name="description" content="Convert Earth masses to Jupiter masses for planetary mass calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Earth Masses to Jupiter Masses</h1>
+  <p>Convert Earth masses to Jupiter masses for planetary mass calculations.</p>
+  <input type="number" id="input" placeholder="Enter M⊕">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 317.8)(val);
+      document.getElementById("result").textContent = val + " M⊕ = " + result.toFixed(6) + " MJ";
+    }
+  </script>
+</body>
+</html>

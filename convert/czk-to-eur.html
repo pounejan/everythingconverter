@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Czech Koruna to Euro | Everything Converter 169</title>
+  <meta name="description" content="Convert Czech Koruna to Euro for business and finance.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Czech Koruna to Euro</h1>
+  <p>Convert Czech Koruna to Euro for business and finance.</p>
+  <input type="number" id="input" placeholder="Enter CZK">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 26.0)(val);
+      document.getElementById("result").textContent = val + " CZK = " + result.toFixed(6) + " EUR";
+    }
+  </script>
+</body>
+</html>

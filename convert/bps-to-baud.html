@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bits to Baud (1 bit/symbol) | Everything Converter 169</title>
+  <meta name="description" content="Convert bits per second to baud rate assuming 1 bit/symbol.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Bits to Baud (1 bit/symbol)</h1>
+  <p>Convert bits per second to baud rate assuming 1 bit/symbol.</p>
+  <input type="number" id="input" placeholder="Enter bps">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v)(val);
+      document.getElementById("result").textContent = val + " bps = " + result.toFixed(6) + " baud";
+    }
+  </script>
+</body>
+</html>

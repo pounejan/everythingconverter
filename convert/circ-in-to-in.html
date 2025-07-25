@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Circular Inches to Square Inches | Everything Converter 169</title>
+  <meta name="description" content="Convert circular inches to square inches for circular areas.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Circular Inches to Square Inches</h1>
+  <p>Convert circular inches to square inches for circular areas.</p>
+  <input type="number" id="input" placeholder="Enter circ in">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * Math.PI / 4)(val);
+      document.getElementById("result").textContent = val + " circ in = " + result.toFixed(6) + " in²";
+    }
+  </script>
+</body>
+</html>

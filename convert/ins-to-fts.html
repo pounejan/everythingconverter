@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inches per Second to Feet per Second | Everything Converter 169</title>
+  <meta name="description" content="Convert inches per second to feet per second for quick scaling between measurement units.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Inches per Second to Feet per Second</h1>
+  <p>Convert inches per second to feet per second for quick scaling between measurement units.</p>
+  <input type="number" id="input" placeholder="Enter in/s">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 12)(val);
+      document.getElementById("result").textContent = val + " in/s = " + result.toFixed(6) + " ft/s";
+    }
+  </script>
+</body>
+</html>

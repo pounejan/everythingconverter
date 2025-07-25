@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Acres to Homestead | Everything Converter 169</title>
+  <meta name="description" content="Transform acres to homestead for historical land calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Acres to Homestead</h1>
+  <p>Transform acres to homestead for historical land calculations.</p>
+  <input type="number" id="input" placeholder="Enter acres">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 160)(val);
+      document.getElementById("result").textContent = val + " acres = " + result.toFixed(6) + " homestead";
+    }
+  </script>
+</body>
+</html>

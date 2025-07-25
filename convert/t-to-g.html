@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Time Dilation to Gravitational Field | Everything Converter 169</title>
+  <meta name="description" content="Convert time dilation to gravitational field for relativity.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Time Dilation to Gravitational Field</h1>
+  <p>Convert time dilation to gravitational field for relativity.</p>
+  <input type="number" id="input" placeholder="Enter Δt">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 9.81)(val);
+      document.getElementById("result").textContent = val + " Δt = " + result.toFixed(6) + " g";
+    }
+  </script>
+</body>
+</html>

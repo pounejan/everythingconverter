@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KPH to MPH | Everything Converter 169</title>
+  <meta name="description" content="Transform kilometers per hour to miles per hour for speed comprehension in imperial systems. Perfect for understanding vehicle speeds, travel times, and speed limits in different measurement systems.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>KPH to MPH</h1>
+  <p>Transform kilometers per hour to miles per hour for speed comprehension in imperial systems. Perfect for understanding vehicle speeds, travel times, and speed limits in different measurement systems.</p>
+  <input type="number" id="input" placeholder="Enter kph">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (val => val / 1.60934)(val);
+      document.getElementById("result").textContent = val + " kph = " + result.toFixed(6) + " mph";
+    }
+  </script>
+</body>
+</html>

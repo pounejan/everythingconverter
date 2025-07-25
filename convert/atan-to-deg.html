@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Arc Tangent to Degrees | Everything Converter 169</title>
+  <meta name="description" content="Convert arc tangent to degrees.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Arc Tangent to Degrees</h1>
+  <p>Convert arc tangent to degrees.</p>
+  <input type="number" id="input" placeholder="Enter atan">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => Math.atan(v) * (180 / Math.PI))(val);
+      document.getElementById("result").textContent = val + " atan = " + result.toFixed(6) + " deg";
+    }
+  </script>
+</body>
+</html>

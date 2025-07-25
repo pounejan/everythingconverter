@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Intelligence to Quantum Machine Learning | Everything Converter 169</title>
+  <meta name="description" content="Transform intelligence to quantum machine learning for quantum AI.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Intelligence to Quantum Machine Learning</h1>
+  <p>Transform intelligence to quantum machine learning for quantum AI.</p>
+  <input type="number" id="input" placeholder="Enter IQ">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 1000)(val);
+      document.getElementById("result").textContent = val + " IQ = " + result.toFixed(6) + " QML";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Solar Masses to Pounds | Everything Converter 169</title>
+  <meta name="description" content="Transform solar masses to pounds for extreme astrophysics.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Solar Masses to Pounds</h1>
+  <p>Transform solar masses to pounds for extreme astrophysics.</p>
+  <input type="number" id="input" placeholder="Enter M☉">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 4.385e30 / 0.45359237)(val);
+      document.getElementById("result").textContent = val + " M☉ = " + result.toFixed(6) + " lb";
+    }
+  </script>
+</body>
+</html>

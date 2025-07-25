@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kilopascals to Inches of Water | Everything Converter 169</title>
+  <meta name="description" content="Transform kilopascals to inches of water for industrial ventilation setup.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Kilopascals to Inches of Water</h1>
+  <p>Transform kilopascals to inches of water for industrial ventilation setup.</p>
+  <input type="number" id="input" placeholder="Enter kPa">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v/0.2490889)(val);
+      document.getElementById("result").textContent = val + " kPa = " + result.toFixed(6) + " inH2O";
+    }
+  </script>
+</body>
+</html>

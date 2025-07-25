@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Time to CPU Clock Cycles | Everything Converter 169</title>
+  <meta name="description" content="Convert seconds to clock cycles for performance measurement.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Time to CPU Clock Cycles</h1>
+  <p>Convert seconds to clock cycles for performance measurement.</p>
+  <input type="number" id="input" placeholder="Enter seconds">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 3000000000)(val);
+      document.getElementById("result").textContent = val + " seconds = " + result.toFixed(6) + " cycles";
+    }
+  </script>
+</body>
+</html>

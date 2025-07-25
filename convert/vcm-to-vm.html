@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Volts per Centimeter to Volts per Meter | Everything Converter 169</title>
+  <meta name="description" content="Transform volts per centimeter to volts per meter for electric field strength calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Volts per Centimeter to Volts per Meter</h1>
+  <p>Transform volts per centimeter to volts per meter for electric field strength calculations.</p>
+  <input type="number" id="input" placeholder="Enter V/cm">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 100)(val);
+      document.getElementById("result").textContent = val + " V/cm = " + result.toFixed(6) + " V/m";
+    }
+  </script>
+</body>
+</html>

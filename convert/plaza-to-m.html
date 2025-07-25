@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Plaza to Square Meters | Everything Converter 169</title>
+  <meta name="description" content="Convert plaza to square meters used in Latin American countries.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Plaza to Square Meters</h1>
+  <p>Convert plaza to square meters used in Latin American countries.</p>
+  <input type="number" id="input" placeholder="Enter plaza">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 10000)(val);
+      document.getElementById("result").textContent = val + " plaza = " + result.toFixed(6) + " m²";
+    }
+  </script>
+</body>
+</html>

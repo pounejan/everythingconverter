@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Réaumur to Newton | Everything Converter 169</title>
+  <meta name="description" content="Convert Réaumur to Newton for historical instrument calibrations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Réaumur to Newton</h1>
+  <p>Convert Réaumur to Newton for historical instrument calibrations.</p>
+  <input type="number" id="input" placeholder="Enter °Ré">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>((v*5/4*33/100)))(val);
+      document.getElementById("result").textContent = val + " °Ré = " + result.toFixed(6) + " °N";
+    }
+  </script>
+</body>
+</html>

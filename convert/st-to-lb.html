@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Short Tons to Pounds | Everything Converter 169</title>
+  <meta name="description" content="Convert short tons (US) to pounds for bulk units.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Short Tons to Pounds</h1>
+  <p>Convert short tons (US) to pounds for bulk units.</p>
+  <input type="number" id="input" placeholder="Enter st">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 2000)(val);
+      document.getElementById("result").textContent = val + " st = " + result.toFixed(6) + " lb";
+    }
+  </script>
+</body>
+</html>

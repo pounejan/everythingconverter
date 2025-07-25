@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Relative Permeability to Permeability | Everything Converter 169</title>
+  <meta name="description" content="Convert relative permeability to H/m using μ₀.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Relative Permeability to Permeability</h1>
+  <p>Convert relative permeability to H/m using μ₀.</p>
+  <input type="number" id="input" placeholder="Enter μᵣ">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 4 * Math.PI * 1e-7)(val);
+      document.getElementById("result").textContent = val + " μᵣ = " + result.toFixed(6) + " H/m";
+    }
+  </script>
+</body>
+</html>

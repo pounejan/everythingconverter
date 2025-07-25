@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Centimeters of Water to Pascals | Everything Converter 169</title>
+  <meta name="description" content="Convert cmH2O to pascals for biomedical ventilator and pressure applications.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Centimeters of Water to Pascals</h1>
+  <p>Convert cmH2O to pascals for biomedical ventilator and pressure applications.</p>
+  <input type="number" id="input" placeholder="Enter cmH2O">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v*98.0665)(val);
+      document.getElementById("result").textContent = val + " cmH2O = " + result.toFixed(6) + " Pa";
+    }
+  </script>
+</body>
+</html>

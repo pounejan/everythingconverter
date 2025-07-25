@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Electromagnetic Units of Charge to Coulombs | Everything Converter 169</title>
+  <meta name="description" content="Convert electromagnetic units of charge to coulombs.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Electromagnetic Units of Charge to Coulombs</h1>
+  <p>Convert electromagnetic units of charge to coulombs.</p>
+  <input type="number" id="input" placeholder="Enter emu">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 10)(val);
+      document.getElementById("result").textContent = val + " emu = " + result.toFixed(6) + " C";
+    }
+  </script>
+</body>
+</html>

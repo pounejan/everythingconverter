@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fluid Ounces (US) to Fluid Drams (US) | Everything Converter 169</title>
+  <meta name="description" content="Convert US fluid ounces to US fluid drams for precise volume conversions.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Fluid Ounces (US) to Fluid Drams (US)</h1>
+  <p>Convert US fluid ounces to US fluid drams for precise volume conversions.</p>
+  <input type="number" id="input" placeholder="Enter fl oz(US)">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 8)(val);
+      document.getElementById("result").textContent = val + " fl oz(US) = " + result.toFixed(6) + " fl dr(US)";
+    }
+  </script>
+</body>
+</html>

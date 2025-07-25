@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gilbert to Magnetomotive Force (A·turn) | Everything Converter 169</title>
+  <meta name="description" content="Transform gilberts to ampere-turns for magnetic circuit analysis.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Gilbert to Magnetomotive Force (A·turn)</h1>
+  <p>Transform gilberts to ampere-turns for magnetic circuit analysis.</p>
+  <input type="number" id="input" placeholder="Enter Gb">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 1.2566)(val);
+      document.getElementById("result").textContent = val + " Gb = " + result.toFixed(6) + " A·turn";
+    }
+  </script>
+</body>
+</html>

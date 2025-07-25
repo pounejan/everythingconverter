@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>File Size in KB to MB | Everything Converter 169</title>
+  <meta name="description" content="Convert kilobytes to megabytes to measure storage optimization.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>File Size in KB to MB</h1>
+  <p>Convert kilobytes to megabytes to measure storage optimization.</p>
+  <input type="number" id="input" placeholder="Enter KB">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 1000)(val);
+      document.getElementById("result").textContent = val + " KB = " + result.toFixed(6) + " MB";
+    }
+  </script>
+</body>
+</html>

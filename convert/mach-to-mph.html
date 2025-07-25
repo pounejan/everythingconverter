@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mach to Miles per Hour | Everything Converter 169</title>
+  <meta name="description" content="Convert Mach to miles per hour for hypersonic vehicle specifications and jet performance.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Mach to Miles per Hour</h1>
+  <p>Convert Mach to miles per hour for hypersonic vehicle specifications and jet performance.</p>
+  <input type="number" id="input" placeholder="Enter Mach">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 761.2)(val);
+      document.getElementById("result").textContent = val + " Mach = " + result.toFixed(6) + " mph";
+    }
+  </script>
+</body>
+</html>

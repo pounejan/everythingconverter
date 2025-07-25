@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Square Meters to Square Chains | Everything Converter 169</title>
+  <meta name="description" content="Transform square meters to square chains for land assessments.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Square Meters to Square Chains</h1>
+  <p>Transform square meters to square chains for land assessments.</p>
+  <input type="number" id="input" placeholder="Enter m²">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 404.686)(val);
+      document.getElementById("result").textContent = val + " m² = " + result.toFixed(6) + " ch²";
+    }
+  </script>
+</body>
+</html>

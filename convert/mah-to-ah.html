@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Milliampere-hours to Ampere-hours | Everything Converter 169</title>
+  <meta name="description" content="Transform milliampere-hours to ampere-hours for charge capacity calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Milliampere-hours to Ampere-hours</h1>
+  <p>Transform milliampere-hours to ampere-hours for charge capacity calculations.</p>
+  <input type="number" id="input" placeholder="Enter mAh">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 1000)(val);
+      document.getElementById("result").textContent = val + " mAh = " + result.toFixed(6) + " Ah";
+    }
+  </script>
+</body>
+</html>

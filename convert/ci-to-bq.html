@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Curies to Becquerels | Everything Converter 169</title>
+  <meta name="description" content="Transform curies to becquerels for radioactivity calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Curies to Becquerels</h1>
+  <p>Transform curies to becquerels for radioactivity calculations.</p>
+  <input type="number" id="input" placeholder="Enter Ci">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 3.7e10)(val);
+      document.getElementById("result").textContent = val + " Ci = " + result.toFixed(6) + " Bq";
+    }
+  </script>
+</body>
+</html>

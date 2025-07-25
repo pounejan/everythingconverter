@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kilowatts to Gigawatts | Everything Converter 169</title>
+  <meta name="description" content="Convert kilowatts to gigawatts for macro-energy planning and futuristic simulations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Kilowatts to Gigawatts</h1>
+  <p>Convert kilowatts to gigawatts for macro-energy planning and futuristic simulations.</p>
+  <input type="number" id="input" placeholder="Enter kW">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v/1e6)(val);
+      document.getElementById("result").textContent = val + " kW = " + result.toFixed(6) + " GW";
+    }
+  </script>
+</body>
+</html>

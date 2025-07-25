@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fluid Drams (UK) to Milliliters | Everything Converter 169</title>
+  <meta name="description" content="Convert UK fluid drams to milliliters for precise liquid dosage conversions.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Fluid Drams (UK) to Milliliters</h1>
+  <p>Convert UK fluid drams to milliliters for precise liquid dosage conversions.</p>
+  <input type="number" id="input" placeholder="Enter fl dr(UK)">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 3.55163)(val);
+      document.getElementById("result").textContent = val + " fl dr(UK) = " + result.toFixed(6) + " mL";
+    }
+  </script>
+</body>
+</html>

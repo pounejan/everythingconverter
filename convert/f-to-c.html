@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fahrenheit to Celsius | Everything Converter 169</title>
+  <meta name="description" content="Transform Fahrenheit to Celsius for scientific calculations and international standards. Perfect for medical professionals, researchers, and anyone working with global temperature standards.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Fahrenheit to Celsius</h1>
+  <p>Transform Fahrenheit to Celsius for scientific calculations and international standards. Perfect for medical professionals, researchers, and anyone working with global temperature standards.</p>
+  <input type="number" id="input" placeholder="Enter °F">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (val => (val - 32) * 5/9)(val);
+      document.getElementById("result").textContent = val + " °F = " + result.toFixed(6) + " °C";
+    }
+  </script>
+</body>
+</html>

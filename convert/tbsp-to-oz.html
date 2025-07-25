@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tablespoons to Ounces | Everything Converter 169</title>
+  <meta name="description" content="Transform tablespoons to ounces to fine-tune ingredient measurements in any kitchen.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Tablespoons to Ounces</h1>
+  <p>Transform tablespoons to ounces to fine-tune ingredient measurements in any kitchen.</p>
+  <input type="number" id="input" placeholder="Enter tbsp">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (val => val / 2)(val);
+      document.getElementById("result").textContent = val + " tbsp = " + result.toFixed(6) + " oz";
+    }
+  </script>
+</body>
+</html>

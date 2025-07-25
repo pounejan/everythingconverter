@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Megawatts to Horsepower | Everything Converter 169</title>
+  <meta name="description" content="Convert megawatts to horsepower for large industrial equipment and generators.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Megawatts to Horsepower</h1>
+  <p>Convert megawatts to horsepower for large industrial equipment and generators.</p>
+  <input type="number" id="input" placeholder="Enter MW">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v*1341)(val);
+      document.getElementById("result").textContent = val + " MW = " + result.toFixed(6) + " hp";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vars to Volt-amperes Reactive | Everything Converter 169</title>
+  <meta name="description" content="Transform vars to volt-amperes reactive for reactive power calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Vars to Volt-amperes Reactive</h1>
+  <p>Transform vars to volt-amperes reactive for reactive power calculations.</p>
+  <input type="number" id="input" placeholder="Enter var">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1)(val);
+      document.getElementById("result").textContent = val + " var = " + result.toFixed(6) + " VAR";
+    }
+  </script>
+</body>
+</html>

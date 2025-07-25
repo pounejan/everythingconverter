@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>G to Wb/m² | Everything Converter 169</title>
+  <meta name="description" content="Transform gauss to weber per square meter.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>G to Wb/m²</h1>
+  <p>Transform gauss to weber per square meter.</p>
+  <input type="number" id="input" placeholder="Enter G">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 10000)(val);
+      document.getElementById("result").textContent = val + " G = " + result.toFixed(6) + " Wb/m²";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stones to Kilograms | Everything Converter 169</title>
+  <meta name="description" content="Transform stones to kilograms for UK weight measurements.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Stones to Kilograms</h1>
+  <p>Transform stones to kilograms for UK weight measurements.</p>
+  <input type="number" id="input" placeholder="Enter st">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 6.35029)(val);
+      document.getElementById("result").textContent = val + " st = " + result.toFixed(6) + " kg";
+    }
+  </script>
+</body>
+</html>

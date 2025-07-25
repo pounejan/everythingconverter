@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kilograms per Cubic Meter to Pounds per Gallon (UK) | Everything Converter 169</title>
+  <meta name="description" content="Convert kilograms per cubic meter to pounds per UK gallon for British fluid density conversions.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Kilograms per Cubic Meter to Pounds per Gallon (UK)</h1>
+  <p>Convert kilograms per cubic meter to pounds per UK gallon for British fluid density conversions.</p>
+  <input type="number" id="input" placeholder="Enter kg/m³">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 99.7764)(val);
+      document.getElementById("result").textContent = val + " kg/m³ = " + result.toFixed(6) + " lb/gal(UK)";
+    }
+  </script>
+</body>
+</html>

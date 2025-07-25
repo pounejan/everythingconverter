@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quad Word (64-bit) to Byte | Everything Converter 169</title>
+  <meta name="description" content="Convert 64-bit quad word to byte for large data calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Quad Word (64-bit) to Byte</h1>
+  <p>Convert 64-bit quad word to byte for large data calculations.</p>
+  <input type="number" id="input" placeholder="Enter qword64">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 8)(val);
+      document.getElementById("result").textContent = val + " qword64 = " + result.toFixed(6) + " byte";
+    }
+  </script>
+</body>
+</html>

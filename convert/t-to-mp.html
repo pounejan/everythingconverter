@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tonnes to Planck Masses | Everything Converter 169</title>
+  <meta name="description" content="Convert tonnes to Planck masses for quantum physics.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Tonnes to Planck Masses</h1>
+  <p>Convert tonnes to Planck masses for quantum physics.</p>
+  <input type="number" id="input" placeholder="Enter t">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1e3 / 2.176434e-8)(val);
+      document.getElementById("result").textContent = val + " t = " + result.toFixed(6) + " mP";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Watts to dBW | Everything Converter 169</title>
+  <meta name="description" content="Convert watts to dBW for satellite communications and power system calibration.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Watts to dBW</h1>
+  <p>Convert watts to dBW for satellite communications and power system calibration.</p>
+  <input type="number" id="input" placeholder="Enter W">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>10*Math.log10(v))(val);
+      document.getElementById("result").textContent = val + " W = " + result.toFixed(6) + " dBW";
+    }
+  </script>
+</body>
+</html>

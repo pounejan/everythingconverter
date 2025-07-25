@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Megahertz to Kilohertz | Everything Converter 169</title>
+  <meta name="description" content="Convert megahertz to kilohertz for processor and signal analysis.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Megahertz to Kilohertz</h1>
+  <p>Convert megahertz to kilohertz for processor and signal analysis.</p>
+  <input type="number" id="input" placeholder="Enter MHz">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1000)(val);
+      document.getElementById("result").textContent = val + " MHz = " + result.toFixed(6) + " kHz";
+    }
+  </script>
+</body>
+</html>

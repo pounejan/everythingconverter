@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Security to Quantum Cryptography | Everything Converter 169</title>
+  <meta name="description" content="Transform security to quantum cryptography for quantum information.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Security to Quantum Cryptography</h1>
+  <p>Transform security to quantum cryptography for quantum information.</p>
+  <input type="number" id="input" placeholder="Enter Sec">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 1e256)(val);
+      document.getElementById("result").textContent = val + " Sec = " + result.toFixed(6) + " QCrypt";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Coulombs to Elementary Charges | Everything Converter 169</title>
+  <meta name="description" content="Transform coulombs to elementary charges for atomic-scale electricity calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Coulombs to Elementary Charges</h1>
+  <p>Transform coulombs to elementary charges for atomic-scale electricity calculations.</p>
+  <input type="number" id="input" placeholder="Enter C">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 1.602176634e-19)(val);
+      document.getElementById("result").textContent = val + " C = " + result.toFixed(6) + " e";
+    }
+  </script>
+</body>
+</html>

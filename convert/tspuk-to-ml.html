@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Teaspoons (UK) to Milliliters | Everything Converter 169</title>
+  <meta name="description" content="Convert UK teaspoons to milliliters for cooking and medical dosage accuracy.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Teaspoons (UK) to Milliliters</h1>
+  <p>Convert UK teaspoons to milliliters for cooking and medical dosage accuracy.</p>
+  <input type="number" id="input" placeholder="Enter tsp(UK)">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 5.91939)(val);
+      document.getElementById("result").textContent = val + " tsp(UK) = " + result.toFixed(6) + " mL";
+    }
+  </script>
+</body>
+</html>

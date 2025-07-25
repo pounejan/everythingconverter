@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Earth Radii to Kilometers | Everything Converter 169</title>
+  <meta name="description" content="Convert Earth radii to kilometers for planetary measurements.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Earth Radii to Kilometers</h1>
+  <p>Convert Earth radii to kilometers for planetary measurements.</p>
+  <input type="number" id="input" placeholder="Enter R⊕">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 6371)(val);
+      document.getElementById("result").textContent = val + " R⊕ = " + result.toFixed(6) + " km";
+    }
+  </script>
+</body>
+</html>

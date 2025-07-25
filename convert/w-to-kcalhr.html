@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Watts to Kilocalories per Hour | Everything Converter 169</title>
+  <meta name="description" content="Convert watts to kilocalories per hour for exercise physiology and metabolic studies.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Watts to Kilocalories per Hour</h1>
+  <p>Convert watts to kilocalories per hour for exercise physiology and metabolic studies.</p>
+  <input type="number" id="input" placeholder="Enter W">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v*0.859845)(val);
+      document.getElementById("result").textContent = val + " W = " + result.toFixed(6) + " kcal/hr";
+    }
+  </script>
+</body>
+</html>

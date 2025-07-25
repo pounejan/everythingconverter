@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Liters to Shots | Everything Converter 169</title>
+  <meta name="description" content="Convert liters to shots for bar inventory.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Liters to Shots</h1>
+  <p>Convert liters to shots for bar inventory.</p>
+  <input type="number" id="input" placeholder="Enter L">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 22.54)(val);
+      document.getElementById("result").textContent = val + " L = " + result.toFixed(6) + " shot";
+    }
+  </script>
+</body>
+</html>

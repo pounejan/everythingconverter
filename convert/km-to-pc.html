@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kilometers to Parsecs | Everything Converter 169</title>
+  <meta name="description" content="Transform kilometers to parsecs for astronomical measurements.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Kilometers to Parsecs</h1>
+  <p>Transform kilometers to parsecs for astronomical measurements.</p>
+  <input type="number" id="input" placeholder="Enter km">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 3.086e13)(val);
+      document.getElementById("result").textContent = val + " km = " + result.toFixed(6) + " pc";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Maxwell/m² to Tesla | Everything Converter 169</title>
+  <meta name="description" content="Transform maxwell/m² to tesla for field strength.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Maxwell/m² to Tesla</h1>
+  <p>Transform maxwell/m² to tesla for field strength.</p>
+  <input type="number" id="input" placeholder="Enter Mx/m²">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 1e8)(val);
+      document.getElementById("result").textContent = val + " Mx/m² = " + result.toFixed(6) + " T";
+    }
+  </script>
+</body>
+</html>

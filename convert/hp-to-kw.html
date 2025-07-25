@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Horsepower to Kilowatts | Everything Converter 169</title>
+  <meta name="description" content="Convert horsepower to kilowatts for modern engine output equivalency.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Horsepower to Kilowatts</h1>
+  <p>Convert horsepower to kilowatts for modern engine output equivalency.</p>
+  <input type="number" id="input" placeholder="Enter hp">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v/1.341)(val);
+      document.getElementById("result").textContent = val + " hp = " + result.toFixed(6) + " kW";
+    }
+  </script>
+</body>
+</html>

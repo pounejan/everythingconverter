@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Frequency to Sound Wave Period | Everything Converter 169</title>
+  <meta name="description" content="Convert frequency to period for waveform timing.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Frequency to Sound Wave Period</h1>
+  <p>Convert frequency to period for waveform timing.</p>
+  <input type="number" id="input" placeholder="Enter Hz">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => 1 / v)(val);
+      document.getElementById("result").textContent = val + " Hz = " + result.toFixed(6) + " s";
+    }
+  </script>
+</body>
+</html>

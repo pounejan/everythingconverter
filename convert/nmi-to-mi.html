@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nautical Miles to Miles | Everything Converter 169</title>
+  <meta name="description" content="Transform nautical miles to statute miles for land navigation.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Nautical Miles to Miles</h1>
+  <p>Transform nautical miles to statute miles for land navigation.</p>
+  <input type="number" id="input" placeholder="Enter nmi">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1.15078)(val);
+      document.getElementById("result").textContent = val + " nmi = " + result.toFixed(6) + " mi";
+    }
+  </script>
+</body>
+</html>

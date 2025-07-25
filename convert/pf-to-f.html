@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Picofarads to Farads | Everything Converter 169</title>
+  <meta name="description" content="Convert picofarads to farads for very small capacitance measurements.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Picofarads to Farads</h1>
+  <p>Convert picofarads to farads for very small capacitance measurements.</p>
+  <input type="number" id="input" placeholder="Enter pF">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1e-12)(val);
+      document.getElementById("result").textContent = val + " pF = " + result.toFixed(6) + " F";
+    }
+  </script>
+</body>
+</html>

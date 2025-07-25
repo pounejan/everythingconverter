@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spans to Inches | Everything Converter 169</title>
+  <meta name="description" content=" (span to in) – Old fingertip unit">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Spans to Inches</h1>
+  <p> (span to in) – Old fingertip unit</p>
+  <input type="number" id="input" placeholder="Enter span">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 9)(val);
+      document.getElementById("result").textContent = val + " span = " + result.toFixed(6) + " in";
+    }
+  </script>
+</body>
+</html>

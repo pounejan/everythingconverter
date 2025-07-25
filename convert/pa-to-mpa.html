@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pascals to Megapascals | Everything Converter 169</title>
+  <meta name="description" content="Convert pascals to megapascals for industrial hydraulic and mechanical systems.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Pascals to Megapascals</h1>
+  <p>Convert pascals to megapascals for industrial hydraulic and mechanical systems.</p>
+  <input type="number" id="input" placeholder="Enter Pa">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v/1e6)(val);
+      document.getElementById("result").textContent = val + " Pa = " + result.toFixed(6) + " MPa";
+    }
+  </script>
+</body>
+</html>

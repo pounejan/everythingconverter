@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Newton-meters per Second to Kilowatts | Everything Converter 169</title>
+  <meta name="description" content="Convert newton-meters/sec to kilowatts for dynamic force and power comparisons.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Newton-meters per Second to Kilowatts</h1>
+  <p>Convert newton-meters/sec to kilowatts for dynamic force and power comparisons.</p>
+  <input type="number" id="input" placeholder="Enter N·m/s">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>v/1000)(val);
+      document.getElementById("result").textContent = val + " N·m/s = " + result.toFixed(6) + " kW";
+    }
+  </script>
+</body>
+</html>

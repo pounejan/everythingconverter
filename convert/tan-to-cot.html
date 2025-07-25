@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tangent to Cotangent | Everything Converter 169</title>
+  <meta name="description" content="Convert tangent to cotangent value.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Tangent to Cotangent</h1>
+  <p>Convert tangent to cotangent value.</p>
+  <input type="number" id="input" placeholder="Enter tan">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => 1 / v)(val);
+      document.getElementById("result").textContent = val + " tan = " + result.toFixed(6) + " cot";
+    }
+  </script>
+</body>
+</html>

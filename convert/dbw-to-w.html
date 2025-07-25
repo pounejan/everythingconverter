@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>dBW to Watts | Everything Converter 169</title>
+  <meta name="description" content="Transform dBW to watts for RF engineering and antenna power setups.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>dBW to Watts</h1>
+  <p>Transform dBW to watts for RF engineering and antenna power setups.</p>
+  <input type="number" id="input" placeholder="Enter dBW">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v=>Math.pow(10,v/10))(val);
+      document.getElementById("result").textContent = val + " dBW = " + result.toFixed(6) + " W";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Factorial Approximation | Everything Converter 169</title>
+  <meta name="description" content="Estimate large factorials using Stirling’s formula.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Factorial Approximation</h1>
+  <p>Estimate large factorials using Stirling’s formula.</p>
+  <input type="number" id="input" placeholder="Enter n">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => Math.sqrt(2 * Math.PI * v) * Math.pow(v / Math.E, v))(val);
+      document.getElementById("result").textContent = val + " n = " + result.toFixed(6) + " n!";
+    }
+  </script>
+</body>
+</html>

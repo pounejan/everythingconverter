@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cubic Feet to Pecks | Everything Converter 169</title>
+  <meta name="description" content="Convert cubic feet to pecks for volume calculations in agriculture and storage.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Cubic Feet to Pecks</h1>
+  <p>Convert cubic feet to pecks for volume calculations in agriculture and storage.</p>
+  <input type="number" id="input" placeholder="Enter ft³">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 0.311115)(val);
+      document.getElementById("result").textContent = val + " ft³ = " + result.toFixed(6) + " pk";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grains to Metric Tons | Everything Converter 169</title>
+  <meta name="description" content="Transform grains to metric tons for industrial comparison.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Grains to Metric Tons</h1>
+  <p>Transform grains to metric tons for industrial comparison.</p>
+  <input type="number" id="input" placeholder="Enter gr">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 15432358)(val);
+      document.getElementById("result").textContent = val + " gr = " + result.toFixed(6) + " t";
+    }
+  </script>
+</body>
+</html>

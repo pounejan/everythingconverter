@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weber to Tesla·m² | Everything Converter 169</title>
+  <meta name="description" content="Convert weber to tesla·meter squared for total magnetic flux.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Weber to Tesla·m²</h1>
+  <p>Convert weber to tesla·meter squared for total magnetic flux.</p>
+  <input type="number" id="input" placeholder="Enter Wb">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1)(val);
+      document.getElementById("result").textContent = val + " Wb = " + result.toFixed(6) + " T·m²";
+    }
+  </script>
+</body>
+</html>

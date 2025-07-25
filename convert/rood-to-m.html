@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Roods to Square Meters | Everything Converter 169</title>
+  <meta name="description" content="Convert roods to square meters for British land measurements.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Roods to Square Meters</h1>
+  <p>Convert roods to square meters for British land measurements.</p>
+  <input type="number" id="input" placeholder="Enter rood">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1011.71)(val);
+      document.getElementById("result").textContent = val + " rood = " + result.toFixed(6) + " m²";
+    }
+  </script>
+</body>
+</html>

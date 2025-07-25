@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Square Poles to Square Meters | Everything Converter 169</title>
+  <meta name="description" content="Transform square poles to square meters for surveying heritage.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Square Poles to Square Meters</h1>
+  <p>Transform square poles to square meters for surveying heritage.</p>
+  <input type="number" id="input" placeholder="Enter pole²">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 25.2929)(val);
+      document.getElementById("result").textContent = val + " pole² = " + result.toFixed(6) + " m²";
+    }
+  </script>
+</body>
+</html>

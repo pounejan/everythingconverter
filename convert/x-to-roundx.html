@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Round Number | Everything Converter 169</title>
+  <meta name="description" content="Round a number to the nearest integer.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Round Number</h1>
+  <p>Round a number to the nearest integer.</p>
+  <input type="number" id="input" placeholder="Enter x">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => Math.round(v))(val);
+      document.getElementById("result").textContent = val + " x = " + result.toFixed(6) + " round(x)";
+    }
+  </script>
+</body>
+</html>

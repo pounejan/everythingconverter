@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Liters to Cubic Yards | Everything Converter 169</title>
+  <meta name="description" content="Convert liters to cubic yards for volume conversions in construction and industry.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Liters to Cubic Yards</h1>
+  <p>Convert liters to cubic yards for volume conversions in construction and industry.</p>
+  <input type="number" id="input" placeholder="Enter L">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 764.555)(val);
+      document.getElementById("result").textContent = val + " L = " + result.toFixed(6) + " yd³";
+    }
+  </script>
+</body>
+</html>

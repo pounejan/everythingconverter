@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Atomic Units of Charge to Coulombs | Everything Converter 169</title>
+  <meta name="description" content="Convert atomic units of charge to coulombs for atomic physics.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Atomic Units of Charge to Coulombs</h1>
+  <p>Convert atomic units of charge to coulombs for atomic physics.</p>
+  <input type="number" id="input" placeholder="Enter au">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1.602176634e-19)(val);
+      document.getElementById("result").textContent = val + " au = " + result.toFixed(6) + " C";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Acre-feet to Cubic Meters | Everything Converter 169</title>
+  <meta name="description" content="Convert acre-feet to cubic meters for water volume calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Acre-feet to Cubic Meters</h1>
+  <p>Convert acre-feet to cubic meters for water volume calculations.</p>
+  <input type="number" id="input" placeholder="Enter ac-ft">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1233.48)(val);
+      document.getElementById("result").textContent = val + " ac-ft = " + result.toFixed(6) + " m³";
+    }
+  </script>
+</body>
+</html>

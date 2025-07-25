@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nanofarads to Microfarads | Everything Converter 169</title>
+  <meta name="description" content="Transform nanofarads to microfarads for capacitance calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Nanofarads to Microfarads</h1>
+  <p>Transform nanofarads to microfarads for capacitance calculations.</p>
+  <input type="number" id="input" placeholder="Enter nF">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 1000)(val);
+      document.getElementById("result").textContent = val + " nF = " + result.toFixed(6) + " μF";
+    }
+  </script>
+</body>
+</html>

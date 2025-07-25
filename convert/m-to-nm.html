@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Square Meters to Square Nanometers | Everything Converter 169</title>
+  <meta name="description" content="Transform square meters to square nanometers for scientific analysis.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Square Meters to Square Nanometers</h1>
+  <p>Transform square meters to square nanometers for scientific analysis.</p>
+  <input type="number" id="input" placeholder="Enter m²">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 1e18)(val);
+      document.getElementById("result").textContent = val + " m² = " + result.toFixed(6) + " nm²";
+    }
+  </script>
+</body>
+</html>

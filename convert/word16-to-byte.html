@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Word (16-bit) to Byte | Everything Converter 169</title>
+  <meta name="description" content="Convert 16-bit word to byte for processor memory calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Word (16-bit) to Byte</h1>
+  <p>Convert 16-bit word to byte for processor memory calculations.</p>
+  <input type="number" id="input" placeholder="Enter word16">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v * 2)(val);
+      document.getElementById("result").textContent = val + " word16 = " + result.toFixed(6) + " byte";
+    }
+  </script>
+</body>
+</html>

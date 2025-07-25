@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rømer to Kelvin | Everything Converter 169</title>
+  <meta name="description" content="Transform Rømer to Kelvin for absolute temperature calculations.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Rømer to Kelvin</h1>
+  <p>Transform Rømer to Kelvin for absolute temperature calculations.</p>
+  <input type="number" id="input" placeholder="Enter °Rø">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => (v - 7.5) * 40/21 + 273.15)(val);
+      document.getElementById("result").textContent = val + " °Rø = " + result.toFixed(6) + " K";
+    }
+  </script>
+</body>
+</html>

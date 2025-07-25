@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hungarian Forint to US Dollar | Everything Converter 169</title>
+  <meta name="description" content="Convert Hungarian Forint to US Dollar for currency exchange.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Hungarian Forint to US Dollar</h1>
+  <p>Convert Hungarian Forint to US Dollar for currency exchange.</p>
+  <input type="number" id="input" placeholder="Enter HUF">
+  <button onclick="convert()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convert() {
+      const val = parseFloat(document.getElementById("input").value);
+      if (isNaN(val)) return;
+      const result = (v => v / 365)(val);
+      document.getElementById("result").textContent = val + " HUF = " + result.toFixed(6) + " USD";
+    }
+  </script>
+</body>
+</html>
