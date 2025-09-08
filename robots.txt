@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://everythingconverter169.com/sitemap.xml
